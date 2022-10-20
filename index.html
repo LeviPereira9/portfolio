@@ -8,17 +8,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- CSS -->
     <link rel="stylesheet" href="css/app.css">
+    <!-- JavaScript -->
+    <script src="app.js" defer></script>
     <title>Portfólio</title>
 </head>
 <body>
     <header>
         <nav class="menu">
             <ul class="menu__container" >
-                <li class="menu__container__options">Inicio</li>
+                <li class="menu__container__icon"><i class="fa-solid fa-house icon"></i></li>
                 <li class="menu__container__options">Sobre mim</li>
                 <li class="menu__container__options">Conhecimentos</li>
                 <li class="menu__container__options">Projetos</li>
+                <li class="menu__container__miniMenu" > <i class="fa-solid fa-bars icon" id="miniMenu" ></i>
+                    <ul class="menu__container__miniMenu__content hideContent" id="miniMenu__content">
+                        <li class="menu__container__miniMenu__content__options" >Sobre mim</li>
+                        <li class="menu__container__miniMenu__content__options" >Conhecimentos</li>
+                        <li class="menu__container__miniMenu__content__options" >Projetos</li>
+                    </ul>
+                </li>
             </ul>
+            
         </nav>
     </header>
     <main>

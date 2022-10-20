@@ -1,6 +1,94 @@
 @use "../1_base/variables";
+@import "../3_modules/modules.scss";
 
 .menu{
-    margin: 5px;
-    outline: 1px solid red;
+    background-color: variables.$primary-color;
+    padding: 25px 0;
+    
+    &__container{
+        display: flex;
+        justify-content: space-around;
+
+        @include mobiTable{
+            justify-content: space-between;
+        }
+
+        &__icon{
+            width: 200px;
+            text-align: center;
+            padding: 5px 0;
+
+            .icon{
+                font-size: 1.5em;
+                color: variables.$white-color;
+                cursor: pointer;
+
+            }
+        }
+        
+        &__options{
+            color: variables.$white-color;
+            font-weight: bolder;
+            text-align: center;
+            width: 200px;
+            padding: 5px 0;
+            border-radius: 10px;
+            cursor: pointer;
+            outline: 1px solid red;
+
+            @include mobiTable{
+                display: none;
+            }
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+
+        &__miniMenu{
+            display: none;
+            position: relative;
+            width: 200px;
+            text-align: center;
+            padding: 5px 0;
+
+            @include mobiTable{
+                display: block;
+            }
+
+            .icon{
+                position: relative;
+                z-index: 1;
+                font-size: 2em;
+                color: variables.$white-color;
+                cursor: pointer;
+            }
+
+            &__content{
+                position:absolute;
+                box-sizing: border-box;
+                top: 0px;
+                left: -20px;
+                padding-top: 65px;
+                background-color: variables.$senary-color;
+                width: 110%;
+                height: 25em;
+                border-top-left-radius: 15px;
+                text-align: center;
+
+                &__options{
+                    padding: 25px 0;
+                    color: variables.$white-color;
+                    font-weight: bolder;
+                    border-bottom: 1px solid variables.$white-color;
+                    cursor: pointer;
+                    
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+                
+            }
+        }
+    }
 }

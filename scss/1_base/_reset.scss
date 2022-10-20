@@ -2,8 +2,17 @@
     margin: 0;
     padding: 0;
     font-family: "Open Sans", sans-serif;
+    font-size: 24px;
 }
 
 li{
     list-style: none;
+}
+
+.hideContent{
+    display: none;
+}
+
+.showContent{
+    display: block;
 }
