@@ -25,6 +25,7 @@ li {
 .menu__container {
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 @media (max-width: 640px) {
   .menu__container {

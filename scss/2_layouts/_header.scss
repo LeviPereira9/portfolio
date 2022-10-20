@@ -8,6 +8,7 @@
     &__container{
         display: flex;
         justify-content: space-around;
+        align-items: center;
 
         @include mobiTable{
             justify-content: space-between;
