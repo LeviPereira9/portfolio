@@ -50,7 +50,6 @@ li {
   padding: 5px 0;
   border-radius: 10px;
   cursor: pointer;
-  outline: 1px solid red;
 }
 @media (max-width: 640px) {
   .menu__container__options {
