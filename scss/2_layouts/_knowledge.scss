@@ -1,0 +1,208 @@
+@use "../1_base/variables";
+@import "../3_modules/modules.scss";
+
+.knowledge{
+    border-top: 1px solid variables.$senary-color;
+    background-image: url("../../img/repeatBack.png");
+    display: grid;
+    height: fit-content;
+    grid-template-columns: auto auto;
+    padding-bottom: 25px;
+
+    &__title{
+        grid-column: 1/3;
+        font-family: variables.$title-font;
+        color: variables.$white-color;
+        font-size: 2em;
+        text-align: center;
+        padding: 25px 0 35px 0;
+        transition: all 1s;
+
+        @include mobiTable{
+            font-size: 1.7em;
+        }
+
+        @include mobile{
+            font-size: 1.23em;
+            padding-bottom: 5px;
+        }
+    }
+    
+    &__selector{
+        display: grid;
+        grid-template-columns: auto auto;
+        place-items: center;
+        gap: 25px;
+        padding: 25px;
+        transition: all 1s;
+
+        @include mobiTable{
+            grid-template-columns: auto auto auto;
+            grid-column: 1/3;
+        }
+
+        @include mobile{
+            gap: 5px;
+            grid-template-columns: auto auto auto;
+            grid-column: 1/3;
+        }
+
+        &__icons{
+            font-size: 4.5em;
+            transition: all 1s;
+            padding: 15px;
+            cursor: pointer;
+            transition: all 1s;
+        
+
+            @include tabDesk{
+                font-size: 3.5em;
+            }
+
+            @include mobiTable{
+                font-size: 3em;
+            }
+
+    
+        }
+    }
+
+    &__content{
+        
+        &__start{
+            color: variables.$white-color;
+            line-height: 2em;
+            text-align: justify;
+            padding: 0 35px;
+
+            p{
+                margin-bottom: 35px;
+            }
+        }
+
+        &__info{
+
+            &__text{
+                color: white;
+                padding: 5px 15px;
+                margin-bottom: 15px;
+                text-align: justify;
+                transition: all 1s;
+
+                @include tablet{
+                    font-size: .90em;
+                }
+
+                @include mobiTable{
+                    grid-column: 1/5;
+                    font-size: .75em;
+                    width: 120%;
+                }
+
+                @include mobile{
+                    grid-column: 1/3;
+                    font-size: .65em;
+                    box-sizing: border-box;
+                    width: 130%;
+                }
+            }
+
+            &__list{
+                color: white;
+                line-height: 2em;
+                margin-left: 50px;
+                transition: all 1s;
+                
+                li{
+                    list-style: circle;
+
+                    @include tablet{
+                        font-size: .90em;
+                    }
+
+                    @include mobiTable{
+                        font-size: .75em;
+                    }
+    
+                    @include mobile{
+                        bottom: 15px
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+#html5Icon{
+    color: variables.$html-color;
+    transition: all .8s;
+    border: 1px solid transparent;
+    border-radius: 15px;
+
+    &:hover{
+        border: 1px solid black;
+        background-color: variables.$html-color;
+        color: white;
+    }
+}
+#css3Icon{
+    color: variables.$css-color;
+    transition: all .8s;
+    border: 1px solid transparent;
+    border-radius: 15px;
+
+    &:hover{
+        border: 1px solid black;
+        background-color: variables.$css-color;
+        color: white;
+    }
+}
+#jsIcon{
+    color: variables.$js-color;
+    transition: all .8s;
+    border: 1px solid transparent;
+    border-radius: 15px;
+
+    &:hover{
+        border: 1px solid black;
+        background-color: variables.$js-color;
+        color: white;
+    }
+}
+#sassIcon{
+    color: variables.$scss-color;
+    transition: all .8s;
+    border: 1px solid transparent;
+    border-radius: 15px;
+
+    &:hover{
+        border: 1px solid black;
+        background-color: variables.$scss-color;
+        color: white;
+    }
+}
+#reactIcon{
+    color: variables.$react-color;
+    transition: all .8s;
+    border: 1px solid transparent;
+    border-radius: 15px;
+
+    &:hover{
+        border: 1px solid black;
+        background-color: variables.$react-color;
+        color: white;
+    }
+}
+#gitIcon{
+    color: variables.$git-color;
+    transition: all .8s;
+    border: 1px solid transparent;
+    border-radius: 15px;
+
+    &:hover{
+        border: 1px solid black;
+        background-color: variables.$git-color;
+        color: white;
+    }
+}

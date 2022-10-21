@@ -320,7 +320,6 @@ li {
 .about__bottom {
   background-color: #1F1F1F;
   padding: 35px 0;
-  outline: 1px solid red;
 }
 .about__bottom__title {
   font-family: "Poppins", sans-serif;
@@ -378,6 +377,205 @@ li {
 }
 .about__bottom__text p {
   margin-bottom: 30px;
+}
+
+.knowledge {
+  border-top: 1px solid #3D3D3D;
+  background-image: url("../../img/repeatBack.png");
+  display: grid;
+  height: fit-content;
+  grid-template-columns: auto auto;
+  padding-bottom: 25px;
+}
+.knowledge__title {
+  grid-column: 1/3;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  padding: 25px 0 35px 0;
+  transition: all 1s;
+}
+@media (max-width: 640px) {
+  .knowledge__title {
+    font-size: 1.7em;
+  }
+}
+@media (max-width: 425px) {
+  .knowledge__title {
+    font-size: 1.23em;
+    padding-bottom: 5px;
+  }
+}
+.knowledge__selector {
+  display: grid;
+  grid-template-columns: auto auto;
+  place-items: center;
+  gap: 25px;
+  padding: 25px;
+  transition: all 1s;
+}
+@media (max-width: 640px) {
+  .knowledge__selector {
+    grid-template-columns: auto auto auto;
+    grid-column: 1/3;
+  }
+}
+@media (max-width: 425px) {
+  .knowledge__selector {
+    gap: 5px;
+    grid-template-columns: auto auto auto;
+    grid-column: 1/3;
+  }
+}
+.knowledge__selector__icons {
+  font-size: 4.5em;
+  transition: all 1s;
+  padding: 15px;
+  cursor: pointer;
+  transition: all 1s;
+}
+@media (max-width: 1024px) {
+  .knowledge__selector__icons {
+    font-size: 3.5em;
+  }
+}
+@media (max-width: 640px) {
+  .knowledge__selector__icons {
+    font-size: 3em;
+  }
+}
+.knowledge__content__start {
+  color: white;
+  line-height: 2em;
+  text-align: justify;
+  padding: 0 35px;
+}
+.knowledge__content__start p {
+  margin-bottom: 35px;
+}
+.knowledge__content__info__text {
+  color: white;
+  padding: 5px 15px;
+  margin-bottom: 15px;
+  text-align: justify;
+  transition: all 1s;
+}
+@media (max-width: 860px) {
+  .knowledge__content__info__text {
+    font-size: 0.9em;
+  }
+}
+@media (max-width: 640px) {
+  .knowledge__content__info__text {
+    grid-column: 1/5;
+    font-size: 0.75em;
+    width: 120%;
+  }
+}
+@media (max-width: 425px) {
+  .knowledge__content__info__text {
+    grid-column: 1/3;
+    font-size: 0.65em;
+    box-sizing: border-box;
+    width: 130%;
+  }
+}
+.knowledge__content__info__list {
+  color: white;
+  line-height: 2em;
+  margin-left: 50px;
+  transition: all 1s;
+}
+.knowledge__content__info__list li {
+  list-style: circle;
+}
+@media (max-width: 860px) {
+  .knowledge__content__info__list li {
+    font-size: 0.9em;
+  }
+}
+@media (max-width: 640px) {
+  .knowledge__content__info__list li {
+    font-size: 0.75em;
+  }
+}
+@media (max-width: 425px) {
+  .knowledge__content__info__list li {
+    bottom: 15px;
+  }
+}
+
+#html5Icon {
+  color: #f16529;
+  transition: all 0.8s;
+  border: 1px solid transparent;
+  border-radius: 15px;
+}
+#html5Icon:hover {
+  border: 1px solid black;
+  background-color: #f16529;
+  color: white;
+}
+
+#css3Icon {
+  color: #2965F1;
+  transition: all 0.8s;
+  border: 1px solid transparent;
+  border-radius: 15px;
+}
+#css3Icon:hover {
+  border: 1px solid black;
+  background-color: #2965F1;
+  color: white;
+}
+
+#jsIcon {
+  color: #EFD81D;
+  transition: all 0.8s;
+  border: 1px solid transparent;
+  border-radius: 15px;
+}
+#jsIcon:hover {
+  border: 1px solid black;
+  background-color: #EFD81D;
+  color: white;
+}
+
+#sassIcon {
+  color: #CF649A;
+  transition: all 0.8s;
+  border: 1px solid transparent;
+  border-radius: 15px;
+}
+#sassIcon:hover {
+  border: 1px solid black;
+  background-color: #CF649A;
+  color: white;
+}
+
+#reactIcon {
+  color: #00D8FF;
+  transition: all 0.8s;
+  border: 1px solid transparent;
+  border-radius: 15px;
+}
+#reactIcon:hover {
+  border: 1px solid black;
+  background-color: #00D8FF;
+  color: white;
+}
+
+#gitIcon {
+  color: #F03C2E;
+  transition: all 0.8s;
+  border: 1px solid transparent;
+  border-radius: 15px;
+}
+#gitIcon:hover {
+  border: 1px solid black;
+  background-color: #F03C2E;
+  color: white;
 }
 
 /*# sourceMappingURL=app.css.map */
