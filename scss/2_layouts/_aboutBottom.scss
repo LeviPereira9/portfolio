@@ -1,0 +1,67 @@
+@use "../1_base/variables";
+@import "../3_modules/modules.scss";
+
+.about{
+    &__bottom{
+        background-color: variables.$tertiary-color;
+        padding: 35px 0;
+        outline: 1px solid red;
+
+        &__title{
+            font-family: variables.$title-font;
+            color: variables.$white-color;
+            text-align: center;
+            font-size: 2em;
+            padding: 45px 0 15px 0;
+            border-top: 1px solid variables.$senary-color;
+
+            @include tablet{
+                font-size: 1.8em;
+            }
+
+            @include mobiTable{
+                font-size: 1.5em;
+                padding-bottom: 10px;
+            }
+
+            @include mobile{
+                font-size: 1.2em;
+                padding-bottom: 10px;
+            }
+        }
+
+        &__text{
+            color: variables.$white-color;
+            text-indent: 1.5em;
+            text-align: justify;
+            padding: 35px 35px;
+            line-height: 50px;
+            
+            @include tablet{
+                padding: 35px 50px;
+            }
+
+            @include mobiTable{
+                padding: 15px 45px;
+
+                p{
+                    font-size: .95em;
+                }
+            }
+            
+            @include mobile{
+                padding: 15px 35px;
+
+                p{
+                    font-size: .85em;
+                    line-height: 40px;
+                }
+            }
+            
+            p{
+                margin-bottom: 30px;
+            }
+        }
+    }
+    
+}

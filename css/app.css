@@ -159,7 +159,6 @@ li {
 
 .about__top {
   position: relative;
-  outline: 1px solid red;
   height: 85vh;
   background-color: #333333;
   /* Formato de decoração no background. */
@@ -316,6 +315,69 @@ li {
     margin-top: 15vh;
     color: white;
   }
+}
+
+.about__bottom {
+  background-color: #1F1F1F;
+  padding: 35px 0;
+  outline: 1px solid red;
+}
+.about__bottom__title {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  text-align: center;
+  font-size: 2em;
+  padding: 45px 0 15px 0;
+  border-top: 1px solid #3D3D3D;
+}
+@media (max-width: 860px) {
+  .about__bottom__title {
+    font-size: 1.8em;
+  }
+}
+@media (max-width: 640px) {
+  .about__bottom__title {
+    font-size: 1.5em;
+    padding-bottom: 10px;
+  }
+}
+@media (max-width: 425px) {
+  .about__bottom__title {
+    font-size: 1.2em;
+    padding-bottom: 10px;
+  }
+}
+.about__bottom__text {
+  color: white;
+  text-indent: 1.5em;
+  text-align: justify;
+  padding: 35px 35px;
+  line-height: 50px;
+}
+@media (max-width: 860px) {
+  .about__bottom__text {
+    padding: 35px 50px;
+  }
+}
+@media (max-width: 640px) {
+  .about__bottom__text {
+    padding: 15px 45px;
+  }
+  .about__bottom__text p {
+    font-size: 0.95em;
+  }
+}
+@media (max-width: 425px) {
+  .about__bottom__text {
+    padding: 15px 35px;
+  }
+  .about__bottom__text p {
+    font-size: 0.85em;
+    line-height: 40px;
+  }
+}
+.about__bottom__text p {
+  margin-bottom: 30px;
 }
 
 /*# sourceMappingURL=app.css.map */
