@@ -58,7 +58,7 @@
 
             .icon{
                 position: relative;
-                z-index: 1;
+                z-index: 3;
                 font-size: 2em;
                 color: variables.$white-color;
                 cursor: pointer;
@@ -66,14 +66,16 @@
 
             &__content{
                 position:absolute;
+                z-index: 2;
                 box-sizing: border-box;
                 top: 0px;
                 left: -20px;
                 padding-top: 65px;
                 background-color: variables.$senary-color;
                 width: 110%;
-                height: 25em;
+                height: 35em;
                 border-top-left-radius: 15px;
+                border-bottom-left-radius: 15px;
                 text-align: center;
 
                 &__options{
