@@ -19,7 +19,7 @@
             color: variables.$senary-color;
             width: 100%;
             height: 100%;
-            padding-bottom: 5vh;
+            padding-bottom: 4.5vh;
             box-sizing: border-box;
             position: absolute;
             top: 0px;
@@ -38,6 +38,7 @@
 
             @include mobile{
                 clip-path: polygon(100% 0, 100% 27%, 100% 100%, 0 100%, 0 0);
+                padding-bottom: 4vh;
             }
         }
 
@@ -144,7 +145,7 @@
 
                 @include tabDesk{
                     font-size: 9em;
-                    margin: 110px 5px 0px 0px;
+                    margin: 35px 15px 0px 0px;
                 }
                 
                 @include tablet{
@@ -154,7 +155,8 @@
 
                 @include mobiTable{
                     font-size: 5em;
-                    margin-top: 60vh;
+                    margin-top: 63vh;
+                    margin-right: 5px;
                 }
 
                 @include mobile{

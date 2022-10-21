@@ -174,7 +174,7 @@ li {
   color: #3D3D3D;
   width: 100%;
   height: 100%;
-  padding-bottom: 5vh;
+  padding-bottom: 4.5vh;
   box-sizing: border-box;
   position: absolute;
   top: 0px;
@@ -195,6 +195,7 @@ li {
 @media (max-width: 425px) {
   .about__top::before {
     clip-path: polygon(100% 0, 100% 27%, 100% 100%, 0 100%, 0 0);
+    padding-bottom: 4vh;
   }
 }
 .about__top__info {
@@ -294,7 +295,7 @@ li {
 @media (max-width: 1024px) {
   .about__top__info__icon {
     font-size: 9em;
-    margin: 110px 5px 0px 0px;
+    margin: 35px 15px 0px 0px;
   }
 }
 @media (max-width: 860px) {
@@ -306,7 +307,8 @@ li {
 @media (max-width: 640px) {
   .about__top__info__icon {
     font-size: 5em;
-    margin-top: 60vh;
+    margin-top: 63vh;
+    margin-right: 5px;
   }
 }
 @media (max-width: 425px) {
