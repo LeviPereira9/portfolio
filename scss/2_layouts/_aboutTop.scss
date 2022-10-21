@@ -1,0 +1,173 @@
+@use "../1_base/variables";
+@import "../3_modules/modules.scss";
+
+.about{
+
+    &__top{
+        position: relative;
+        outline: 1px solid red;
+        height: 85vh;
+        background-color: variables.$quinary-color;
+
+        /* Formato de decoração no background. */
+        &::before{
+            content: "Scroll Down ▼ ";
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            background-color: variables.$tertiary-color;
+            color: variables.$senary-color;
+            width: 100%;
+            height: 100%;
+            padding-bottom: 5vh;
+            box-sizing: border-box;
+            position: absolute;
+            top: 0px;
+            z-index: 0;
+            clip-path: polygon(50% 0%, 100% 100%, 50% 100%, 0 100%, 0 0);
+            transition: all 1s;
+
+
+            @include tablet{
+                clip-path: polygon(100% 0, 100% 27%, 58% 100%, 0 100%, 0 0);
+            }
+
+            @include mobiTable{
+                clip-path: polygon(100% 0, 100% 27%, 69% 100%, 0 100%, 0 0);
+            }
+
+            @include mobile{
+                clip-path: polygon(100% 0, 100% 27%, 100% 100%, 0 100%, 0 0);
+            }
+        }
+
+        /* Conteúdo dentro da parte superior. */
+        &__info{
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: auto auto;
+
+            @include mobile{
+                grid-template-columns: auto;
+                place-items: center;
+            }
+            
+            /* Título do Olá! */
+            &__title{
+                font-family: variables.$title-font;
+                margin-left: 35px;
+                margin-top: 10%;
+                height: 150px;
+                color: variables.$white-color;
+                font-size: 2em;
+                cursor: default;
+                transition: all 1s;
+
+                @include tabDesk{
+                    font-size: 1.5em;
+                }
+                
+                @include tablet{
+                    font-size: 1.5em;
+                }
+
+                @include mobiTable{
+                    font-size: 1em;
+                    margin-left: 25px;
+                }
+
+                /* Container do nome com efeito Glitch. */
+                &__name{
+                    margin: 15px 0;
+                    position: relative;
+                    height: 65px;
+                    
+                    
+                    /* Nome aqui. */
+                    /* Duas animações, uma para a palavra e outro para as com efeito glitch. */
+                    &__glitch{
+                        font-size: 2em;
+                        position: absolute;
+                        text-transform: uppercase;
+                        letter-spacing: 3px;
+                        animation: nameMove .3s linear 2s 5 normal none;
+                        
+                        /* Load Ani */
+                        &::before, &::after{
+                            content: "LEVI";
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            animation: bug .3s linear 2s 5 normal none;
+                        }
+
+                        /* Cor e propriedades para animação glitch. */
+                        &::before{
+                            color: #e91e63;
+                            z-index: -2;
+                            animation-direction: normal;
+                        }
+
+                        &::after{
+                            color: #2196f3;
+                            z-index: -1 ;
+                            animation-direction: reverse;
+                        }
+                        
+                        /* Ani Hover */
+                        &:hover{
+                            animation: nameMove .3s linear 2s infinite normal none;
+                        }
+                        
+                        &:hover::before{
+                            color: #e91e63;
+                            z-index: -2;
+                            animation: bug .3s linear 2s infinite normal none;
+                        }
+                        
+                        &:hover::after{
+                            color: #2196f3;
+                            z-index: -1 ;
+                            animation: bug .3s linear 2s infinite reverse none;
+                        }
+                    }
+                }
+            }
+            
+            &__icon{
+                color: variables.$tertiary-color;
+                text-align: right;
+                font-size: 10em;
+                margin: 35px 35px 0px 0px;
+                transition: all 1s;
+
+                @include tabDesk{
+                    font-size: 9em;
+                    margin: 110px 5px 0px 0px;
+                }
+                
+                @include tablet{
+                    font-size: 8em;
+                    margin-top: 53vh;
+                }
+
+                @include mobiTable{
+                    font-size: 5em;
+                    margin-top: 60vh;
+                }
+
+                @include mobile{
+                    margin-top: 15vh;
+                    color: white;
+                }
+            }
+            
+            
+            
+        }
+
+        
+    }
+    
+}

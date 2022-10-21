@@ -1,4 +1,6 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -18,6 +20,58 @@ li {
   display: block;
 }
 
+@keyframes bug {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  20% {
+    top: 4px;
+    left: 4px;
+  }
+  40% {
+    top: -4px;
+    left: -4px;
+  }
+  60% {
+    top: -4px;
+    left: 4px;
+  }
+  80% {
+    top: 4px;
+    left: -4px;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+  }
+}
+@keyframes nameMove {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  20% {
+    top: 0.5px;
+    left: 1.5px;
+  }
+  40% {
+    top: -0.5px;
+    left: -1.5px;
+  }
+  60% {
+    top: -0.5px;
+    left: 1.5px;
+  }
+  80% {
+    top: 0.5px;
+    left: -1.5px;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+  }
+}
 .menu {
   background-color: #000000;
   padding: 25px 0;
@@ -99,6 +153,165 @@ li {
 }
 .menu__container__miniMenu__content__options:hover {
   text-decoration: underline;
+}
+
+.about__top {
+  position: relative;
+  outline: 1px solid red;
+  height: 85vh;
+  background-color: #333333;
+  /* Formato de decoração no background. */
+  /* Conteúdo dentro da parte superior. */
+}
+.about__top::before {
+  content: "Scroll Down ▼ ";
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: #1F1F1F;
+  color: #3D3D3D;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 5vh;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0px;
+  z-index: 0;
+  clip-path: polygon(50% 0%, 100% 100%, 50% 100%, 0 100%, 0 0);
+  transition: all 1s;
+}
+@media (max-width: 860px) {
+  .about__top::before {
+    clip-path: polygon(100% 0, 100% 27%, 58% 100%, 0 100%, 0 0);
+  }
+}
+@media (max-width: 640px) {
+  .about__top::before {
+    clip-path: polygon(100% 0, 100% 27%, 69% 100%, 0 100%, 0 0);
+  }
+}
+@media (max-width: 425px) {
+  .about__top::before {
+    clip-path: polygon(100% 0, 100% 27%, 100% 100%, 0 100%, 0 0);
+  }
+}
+.about__top__info {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: auto auto;
+  /* Título do Olá! */
+}
+@media (max-width: 425px) {
+  .about__top__info {
+    grid-template-columns: auto;
+    place-items: center;
+  }
+}
+.about__top__info__title {
+  font-family: "Poppins", sans-serif;
+  margin-left: 35px;
+  margin-top: 10%;
+  height: 150px;
+  color: white;
+  font-size: 2em;
+  cursor: default;
+  transition: all 1s;
+  /* Container do nome com efeito Glitch. */
+}
+@media (max-width: 1024px) {
+  .about__top__info__title {
+    font-size: 1.5em;
+  }
+}
+@media (max-width: 860px) {
+  .about__top__info__title {
+    font-size: 1.5em;
+  }
+}
+@media (max-width: 640px) {
+  .about__top__info__title {
+    font-size: 1em;
+    margin-left: 25px;
+  }
+}
+.about__top__info__title__name {
+  margin: 15px 0;
+  position: relative;
+  height: 65px;
+  /* Nome aqui. */
+  /* Duas animações, uma para a palavra e outro para as com efeito glitch. */
+}
+.about__top__info__title__name__glitch {
+  font-size: 2em;
+  position: absolute;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  animation: nameMove 0.3s linear 2s 5 normal none;
+  /* Load Ani */
+  /* Cor e propriedades para animação glitch. */
+  /* Ani Hover */
+}
+.about__top__info__title__name__glitch::before, .about__top__info__title__name__glitch::after {
+  content: "LEVI";
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: bug 0.3s linear 2s 5 normal none;
+}
+.about__top__info__title__name__glitch::before {
+  color: #e91e63;
+  z-index: -2;
+  animation-direction: normal;
+}
+.about__top__info__title__name__glitch::after {
+  color: #2196f3;
+  z-index: -1;
+  animation-direction: reverse;
+}
+.about__top__info__title__name__glitch:hover {
+  animation: nameMove 0.3s linear 2s infinite normal none;
+}
+.about__top__info__title__name__glitch:hover::before {
+  color: #e91e63;
+  z-index: -2;
+  animation: bug 0.3s linear 2s infinite normal none;
+}
+.about__top__info__title__name__glitch:hover::after {
+  color: #2196f3;
+  z-index: -1;
+  animation: bug 0.3s linear 2s infinite reverse none;
+}
+.about__top__info__icon {
+  color: #1F1F1F;
+  text-align: right;
+  font-size: 10em;
+  margin: 35px 35px 0px 0px;
+  transition: all 1s;
+}
+@media (max-width: 1024px) {
+  .about__top__info__icon {
+    font-size: 9em;
+    margin: 110px 5px 0px 0px;
+  }
+}
+@media (max-width: 860px) {
+  .about__top__info__icon {
+    font-size: 8em;
+    margin-top: 53vh;
+  }
+}
+@media (max-width: 640px) {
+  .about__top__info__icon {
+    font-size: 5em;
+    margin-top: 60vh;
+  }
+}
+@media (max-width: 425px) {
+  .about__top__info__icon {
+    margin-top: 15vh;
+    color: white;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */
