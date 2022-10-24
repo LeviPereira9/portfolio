@@ -38,13 +38,17 @@
             
             @include tablet{
                 padding: 35px 50px;
+                
+                p{
+                    font-size: .9em;
+                }
             }
 
             @include mobiTable{
                 padding: 15px 45px;
 
                 p{
-                    font-size: .95em;
+                    font-size: .75em;
                 }
             }
             
@@ -52,7 +56,7 @@
                 padding: 15px 35px;
 
                 p{
-                    font-size: .85em;
+                    font-size: .65em;
                     line-height: 40px;
                 }
             }

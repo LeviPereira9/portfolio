@@ -357,13 +357,16 @@ li {
   .about__bottom__text {
     padding: 35px 50px;
   }
+  .about__bottom__text p {
+    font-size: 0.9em;
+  }
 }
 @media (max-width: 640px) {
   .about__bottom__text {
     padding: 15px 45px;
   }
   .about__bottom__text p {
-    font-size: 0.95em;
+    font-size: 0.75em;
   }
 }
 @media (max-width: 425px) {
@@ -371,7 +374,7 @@ li {
     padding: 15px 35px;
   }
   .about__bottom__text p {
-    font-size: 0.85em;
+    font-size: 0.65em;
     line-height: 40px;
   }
 }
