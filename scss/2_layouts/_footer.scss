@@ -1,0 +1,44 @@
+@use "../1_base/variables";
+@import "../3_modules/modules.scss";
+
+.footer{
+    background-color: variables.$primary-color;
+
+    &__copy{
+        color: variables.$white-color;
+        font-size: 1.8em;
+        text-align: center;
+        padding-top: 25px;
+    }
+
+    &__links{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 55px;
+        padding: 25px 0;
+        
+        a{
+            text-decoration: none;
+            font-size: 1.5em;
+
+            i{
+                font-size: 1.3em;
+                color: variables.$white-color;
+            }
+
+            .github, .linkedin, .twitter{
+                outline: 5px solid transparent;
+                padding: 5px;
+                transition: all .3s;
+                box-sizing: border-box;
+
+                &:hover{
+                    outline: 1px solid variables.$senary-color;
+                    border-radius: 5px;
+                }
+            }
+
+        }
+    }
+}

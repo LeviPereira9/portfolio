@@ -837,4 +837,39 @@ li {
   color: transparent;
 }
 
+.footer {
+  background-color: #000000;
+}
+.footer__copy {
+  color: white;
+  font-size: 1.8em;
+  text-align: center;
+  padding-top: 25px;
+}
+.footer__links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 55px;
+  padding: 25px 0;
+}
+.footer__links a {
+  text-decoration: none;
+  font-size: 1.5em;
+}
+.footer__links a i {
+  font-size: 1.3em;
+  color: white;
+}
+.footer__links a .github, .footer__links a .linkedin, .footer__links a .twitter {
+  outline: 5px solid transparent;
+  padding: 5px;
+  transition: all 0.3s;
+  box-sizing: border-box;
+}
+.footer__links a .github:hover, .footer__links a .linkedin:hover, .footer__links a .twitter:hover {
+  outline: 1px solid #3D3D3D;
+  border-radius: 5px;
+}
+
 /*# sourceMappingURL=app.css.map */
