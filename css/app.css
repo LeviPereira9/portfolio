@@ -454,6 +454,23 @@ li {
 .knowledge__content__start p {
   margin-bottom: 35px;
 }
+@media (max-width: 860px) {
+  .knowledge__content__start p {
+    font-size: 0.9em;
+  }
+}
+@media (max-width: 640px) {
+  .knowledge__content__start p {
+    font-size: 0.75em;
+    width: 120%;
+  }
+}
+@media (max-width: 425px) {
+  .knowledge__content__start p {
+    font-size: 0.65em;
+    width: 135%;
+  }
+}
 .knowledge__content__info__text {
   color: white;
   padding: 5px 15px;

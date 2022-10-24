@@ -77,6 +77,20 @@
 
             p{
                 margin-bottom: 35px;
+
+                @include tablet{
+                    font-size: .9em;
+                }
+
+                @include mobiTable{
+                    font-size: .75em;
+                    width: 120%;
+                }
+
+                @include mobile{
+                    font-size: .65em;
+                    width: 135%;
+                }
             }
         }
 
