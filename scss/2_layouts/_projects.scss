@@ -3,7 +3,7 @@
 
 .projects{
     border-top: 1px solid variables.$senary-color;
-    padding-top: 25px;
+    padding-top: 55px;
     padding-bottom: 45px;
     padding-left: 20px;
     background-color: variables.$quinary-color;
@@ -43,6 +43,7 @@
         text-align: center;
         font-family: variables.$title-font;
         color: variables.$white-color;
+        padding-top: 25px;
         margin-bottom: 35px;
         grid-column: 1/4;
         transition: all 1s;
@@ -70,8 +71,9 @@
     &__container{
         display: flex;
         flex-direction: column;
-        outline: 1px solid blue;
         transition: all 1s;
+        outline: 1px solid black;
+        border-radius: 15px;
 
         @include tabDesk{
             margin: 0 35px;
@@ -91,7 +93,7 @@
 
         &__top{
             background-color: variables.$tertiary-color;
-            height: 100px;
+            height: 80px;
             border-top-left-radius: 15px;
             border-top-right-radius: 15px;
             position: relative;
@@ -114,15 +116,15 @@
                 transition: all 1s;
                 
                 @include tablet{
-                    top: 65%;
+                    top: 55%;
                 }
 
                 @include mobile{
-                    top: 65%;
+                    top: 55%;
                 }
 
                 i{
-                    font-size: 3.8em;
+                    font-size: 3em;
                     color: #2292A4;
                     transition: all 1s;
 
@@ -131,7 +133,7 @@
                     }
 
                     @include mobile{
-                        font-size: 3em;
+                        font-size: 2.8em;
                     }
                 }
             }
@@ -139,8 +141,8 @@
             &::after{
                 content: "";
                 background-color: variables.$tertiary-color;
-                width: 150px;   
-                height: 150px;
+                width: 125px;   
+                height: 125px;
                 border-radius: 50%;
                 position: absolute;
                 top: 0;
@@ -153,7 +155,7 @@
             height: 100%;
             
             &__title{
-                margin-top: 90px;
+                margin-top: 65px;
                 margin-bottom: 25px;
                 text-align: center;
                 font-family: variables.$title-font;
@@ -172,7 +174,7 @@
 
                 @include tablet{
                     font-size: .75em;
-                    line-height: 2em;
+                    line-height: 1.8em;
                 }
             }
 
@@ -180,7 +182,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                margin-bottom: 15px;
+                margin-bottom: 5px;
 
                 .site,.git{
                     background-color: variables.$quaternary-color;
