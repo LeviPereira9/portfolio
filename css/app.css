@@ -578,4 +578,237 @@ li {
   color: white;
 }
 
+.projects {
+  border-top: 1px solid #3D3D3D;
+  padding-top: 25px;
+  padding-bottom: 45px;
+  padding-left: 20px;
+  background-color: #333333;
+  display: grid;
+  grid-template-columns: 31% 31% 31%;
+  grid-template-rows: auto;
+  grid-auto-rows: 1fr;
+  column-gap: 35px;
+  row-gap: 25px;
+  transition: all 1s;
+}
+@media (max-width: 1024px) {
+  .projects {
+    grid-template-columns: 48% 48%;
+    column-gap: 25px;
+    row-gap: 35px;
+  }
+}
+@media (max-width: 860px) {
+  .projects {
+    grid-template-columns: 48%, 48%;
+    column-gap: 0px;
+  }
+}
+@media (max-width: 640px) {
+  .projects {
+    grid-template-columns: auto;
+    row-gap: 55px;
+    padding-left: 10px;
+  }
+}
+@media (max-width: 425px) {
+  .projects {
+    grid-template-columns: auto;
+    row-gap: 60px;
+    padding-left: 5px;
+  }
+}
+.projects__title {
+  font-size: 2em;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  margin-bottom: 35px;
+  grid-column: 1/4;
+  transition: all 1s;
+}
+@media (max-width: 1024px) {
+  .projects__title {
+    grid-column: 1/3;
+  }
+}
+@media (max-width: 860px) {
+  .projects__title {
+    grid-column: 1/3;
+  }
+}
+@media (max-width: 640px) {
+  .projects__title {
+    grid-column: 1/2;
+  }
+}
+@media (max-width: 425px) {
+  .projects__title {
+    grid-column: 1/1;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+  }
+}
+.projects__container {
+  display: flex;
+  flex-direction: column;
+  outline: 1px solid blue;
+  transition: all 1s;
+}
+@media (max-width: 1024px) {
+  .projects__container {
+    margin: 0 35px;
+  }
+}
+@media (max-width: 860px) {
+  .projects__container {
+    margin: 0 15px;
+  }
+}
+@media (max-width: 640px) {
+  .projects__container {
+    margin: 0 55px;
+  }
+}
+@media (max-width: 425px) {
+  .projects__container {
+    margin: 0 15px;
+  }
+}
+.projects__container__top {
+  background-color: #1F1F1F;
+  height: 100px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  position: relative;
+}
+.projects__container__top__full i {
+  color: #00D8FF;
+  margin: 15px;
+  font-size: 1.5em;
+}
+.projects__container__top__circle {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  left: 50%;
+  transform: translate(-50%, 0);
+  transition: all 1s;
+}
+@media (max-width: 860px) {
+  .projects__container__top__circle {
+    top: 65%;
+  }
+}
+@media (max-width: 425px) {
+  .projects__container__top__circle {
+    top: 65%;
+  }
+}
+.projects__container__top__circle i {
+  font-size: 3.8em;
+  color: #2292A4;
+  transition: all 1s;
+}
+@media (max-width: 860px) {
+  .projects__container__top__circle i {
+    font-size: 3em;
+  }
+}
+@media (max-width: 425px) {
+  .projects__container__top__circle i {
+    font-size: 3em;
+  }
+}
+.projects__container__top::after {
+  content: "";
+  background-color: #1F1F1F;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.projects__container__content {
+  height: 100%;
+}
+.projects__container__content__title {
+  margin-top: 90px;
+  margin-bottom: 25px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+.projects__container__content__text {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  box-sizing: border-box;
+  padding: 15px;
+  text-align: justify;
+  text-indent: 2em;
+  font-size: 0.8em;
+  margin-bottom: 25px;
+  transition: all 1s;
+}
+@media (max-width: 860px) {
+  .projects__container__content__text {
+    font-size: 0.75em;
+    line-height: 2em;
+  }
+}
+.projects__container__content__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+.projects__container__content__buttons .site, .projects__container__content__buttons .git {
+  background-color: #292929;
+  border: 1px solid black;
+  padding: 5px 10px;
+  width: 130px;
+  color: white;
+  cursor: pointer;
+  font-size: 0.8em;
+}
+.projects__container__content__buttons .site:hover, .projects__container__content__buttons .git:hover {
+  background-color: #1F1F1F;
+}
+.projects__container__content__buttons .site {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+.projects__container__content__buttons .git {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.projects__container__tools {
+  background-color: #0A0A0A;
+  padding: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.projects__container__tools p {
+  font-style: italic;
+  font-size: 0.75em;
+  color: white;
+}
+
+/* Grandes Mentes */
+.backgroundGM {
+  background-image: url("../../img/maquiavel_background.jpg");
+  background-size: cover;
+}
+
+.backgroundEmpty {
+  background-image: url("../../img/backgroundEmpty.png");
+  background-size: cover;
+}
+
+.textEmpty {
+  color: transparent;
+}
+
 /*# sourceMappingURL=app.css.map */
