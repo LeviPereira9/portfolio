@@ -73,8 +73,13 @@
                 }
 
                 @include mobiTable{
-                    font-size: 1em;
+                    font-size: 1.4em;
                     margin-left: 25px;
+                }
+
+                @include mobile{
+                    font-size: 1em;
+                    margin-left: 15px;
                 }
 
                 /* Container do nome com efeito Glitch. */
