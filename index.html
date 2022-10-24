@@ -16,10 +16,18 @@
     <header>
         <nav class="menu">
             <ul class="menu__container" >
-                <li class="menu__container__icon"><i class="fa-solid fa-house icon"></i></li>
-                <li class="menu__container__options">Sobre mim</li>
-                <li class="menu__container__options">Conhecimentos</li>
-                <li class="menu__container__options">Projetos</li>
+                <a href="#aboutTop">
+                    <li class="menu__container__icon"><i class="fa-solid fa-house icon"></i></li>
+                </a>
+                <a href="#aboutBottom">
+                    <li class="menu__container__options">Sobre mim</li>
+                </a>
+                <a href="#knowledges">
+                    <li class="menu__container__options">Conhecimentos</li>
+                </a>
+                <a href="#projects">
+                    <li class="menu__container__options">Projetos</li>
+                </a>
                 <li class="menu__container__miniMenu" > <i class="fa-solid fa-bars icon" id="miniMenu" ></i>
                     <ul class="menu__container__miniMenu__content hideContent" id="miniMenu__content">
                         <li class="menu__container__miniMenu__content__options" >Sobre mim</li>
@@ -34,7 +42,7 @@
     <main>
         <!-- Começo do About -->
         <article class="about" >
-            <section class="about__top" >
+            <section class="about__top" id="aboutTop">
                 <div class="about__top__info">
                     <h1 class="about__top__info__title" >
                         Olá, eu sou o
@@ -46,7 +54,7 @@
                     <i class="fa-brands fa-github about__top__info__icon " ></i>
                 </div>
             </section>
-            <section class="about__bottom">
+            <section class="about__bottom" id="aboutBottom">
                 <h2 class="about__bottom__title" >Sobre mim</h2>
                 <div class="about__bottom__text">
                     <p>
@@ -59,7 +67,7 @@
             </section>
         </article>
         <!-- Fim do About -->
-        <article class="knowledge" >
+        <article class="knowledge" id="knowledges" >
             <h2 class="knowledge__title" >Conhecimentos</h2>
             <section class="knowledge__selector">
                 <i class="fa-brands fa-html5 knowledge__selector__icons"  id="html5Icon" onclick="changeContent(0)" ></i>
@@ -143,7 +151,7 @@
                 </div>
             </section>
         </article>
-        <article class="projects" >
+        <article class="projects" id="projects">
             <h2 class="projects__title">Projetos</h2>
             <!-- Projeto 01: Grandes Mentes -->
             <section class="projects__container">
@@ -163,8 +171,17 @@
                         O Projeto Grandes Mentes, consiste no consumo da API o Pensador em Conjuto com a biblioteca do React, na aplicação criada, temos quatro filósofos que deixaram frases marcantes em vida e com a API o Pensador, retornamos uma frase aleatória quando o usuário deseja.
                     </p>
                     <div class="projects__container__content__buttons">
-                        <button class="site"><i class="fa-solid fa-link"></i> Site </button>
-                        <button class="git"><i class="fa-brands fa-github-alt"></i> Código</button>
+                        <a href="#" target="_blank">
+                            <button class="site">
+                                <i class="fa-solid fa-link"></i>
+                                Site 
+                            </button>
+                        </a>
+                        <a href="https://github.com/LeviPereira9/frases" target="_blank">
+                            <button class="git">
+                                <i class="fa-brands fa-github-alt"></i>
+                                Código
+                            </button></a>
                     </div>
                 </div>
                 <div class="projects__container__tools">
