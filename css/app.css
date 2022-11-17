@@ -442,6 +442,12 @@ a {
   padding: 25px;
   transition: all 1s;
 }
+@media (max-width: 860px) {
+  .knowledge__selector {
+    grid-template-columns: auto auto auto;
+    grid-column: 1/3;
+  }
+}
 @media (max-width: 640px) {
   .knowledge__selector {
     grid-template-columns: auto auto auto;
@@ -484,6 +490,7 @@ a {
 @media (max-width: 860px) {
   .knowledge__content__start p {
     font-size: 0.9em;
+    width: 110%;
   }
 }
 @media (max-width: 640px) {
@@ -507,7 +514,9 @@ a {
 }
 @media (max-width: 860px) {
   .knowledge__content__info__text {
+    grid-column: 1/5;
     font-size: 0.9em;
+    width: 110%;
   }
 }
 @media (max-width: 640px) {
@@ -627,6 +636,12 @@ a {
   transition: all 0.8s;
   border: 1px solid transparent;
   border-radius: 15px;
+}
+@media (max-width: 1024px) {
+  #tsIcon {
+    width: 1em;
+    height: 1em;
+  }
 }
 #tsIcon:hover {
   border: 1px solid black;

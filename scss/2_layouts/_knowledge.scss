@@ -37,6 +37,11 @@
         padding: 25px;
         transition: all 1s;
 
+        @include tablet{
+            grid-template-columns: auto auto auto;
+            grid-column: 1/3;
+        }
+
         @include mobiTable{
             grid-template-columns: auto auto auto;
             grid-column: 1/3;
@@ -81,6 +86,7 @@
 
                 @include tablet{
                     font-size: .9em;
+                    width: 110%;
                 }
 
                 @include mobiTable{
@@ -105,7 +111,9 @@
                 transition: all 1s;
 
                 @include tablet{
+                    grid-column: 1/5;
                     font-size: .90em;
+                    width: 110%;
                 }
 
                 @include mobiTable{
@@ -228,6 +236,11 @@
     border: 1px solid transparent;
     border-radius: 15px;
 
+    @include tabDesk{
+        width: 1em;
+        height: 1em;
+    }
+    
     &:hover{
         border: 1px solid black;
         background-color: variables.$ts-color;
