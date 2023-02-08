@@ -1,14 +1,8 @@
-const miniMenu = document.querySelector("#miniMenu");
-const miniContent = document.querySelector("#miniMenu__content");
 const knowContent = document.querySelectorAll(".knowledge__content__info");
 const knowStart = document.querySelector(".knowledge__content__start");
 let knowStatus = false;
 
 
-
-miniMenu.addEventListener("click", ()=>{
-    miniContent.classList.toggle("showContent");
-});
 
 const changeContent = (index)=>{
     knowStatus = true;

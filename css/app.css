@@ -1,6 +1,11 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap");
+/* Fonts */
+/* Fonts Media */
+/* Colors geral */
+/* Icons Colors */
 html {
   scroll-behavior: smooth;
 }
@@ -9,7 +14,6 @@ html {
   margin: 0;
   padding: 0;
   font-family: "Open Sans", sans-serif;
-  font-size: 24px;
 }
 
 li {
@@ -80,109 +84,45 @@ a {
   text-decoration: none;
 }
 
-.menu {
-  background-color: #000000;
-  padding: 5px 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 5;
+.menu__icon {
+  font-size: 1.5em;
+  color: white;
 }
-.menu__container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-@media (max-width: 640px) {
-  .menu__container {
-    justify-content: space-between;
-  }
-}
-.menu__container__icon {
-  width: 200px;
-  text-align: center;
-  padding: 5px 0;
-}
-.menu__container__icon .icon {
+.menu__icon .icon {
   font-size: 1.5em;
   color: white;
   cursor: pointer;
 }
 @media (max-width: 425px) {
-  .menu__container__icon .icon {
+  .menu__icon .icon {
     font-size: 1.45em;
   }
 }
-.menu__container__options {
+.menu__options {
   color: white;
   font-weight: bolder;
   text-align: center;
-  padding: 5px 0;
-  border-radius: 10px;
-  cursor: pointer;
 }
-@media (max-width: 640px) {
-  .menu__container__options {
-    display: none;
-  }
-}
-.menu__container__options:hover {
-  text-decoration: underline;
-}
-.menu__container__miniMenu {
-  display: none;
-  position: relative;
-  width: 200px;
-  text-align: center;
-  padding: 5px 0;
-}
-@media (max-width: 640px) {
-  .menu__container__miniMenu {
-    display: block;
-  }
-}
-.menu__container__miniMenu .icon {
-  position: relative;
-  z-index: 3;
-  font-size: 1.45em;
-  color: white;
-  cursor: pointer;
-}
-.menu__container__miniMenu__content {
-  position: absolute;
-  z-index: 2;
-  box-sizing: border-box;
-  top: 0px;
-  left: -20px;
-  padding-top: 65px;
-  background-color: #3D3D3D;
-  width: 110%;
-  height: 35em;
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
-  text-align: center;
-}
-.menu__container__miniMenu__content__options {
-  padding: 25px 0;
-  color: white;
-  font-weight: bolder;
-  border-bottom: 1px solid white;
-  cursor: pointer;
-}
-.menu__container__miniMenu__content__options:hover {
+.menu__options:hover {
   text-decoration: underline;
 }
 
-.about__top {
+@media (max-width: 990px) {
+  #navbar-items {
+    border-top: 1px solid white;
+  }
+}
+.start {
   padding-top: 98px;
   position: relative;
-  height: 85vh;
+  height: 90vh;
   background-color: #333333;
   /* Formato de decoração no background. */
   /* Conteúdo dentro da parte superior. */
 }
-.about__top::before {
+.start::before {
   content: "Scroll Down ▼ ";
+  font-size: 1.5em;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -199,22 +139,22 @@ a {
   transition: all 1s;
 }
 @media (max-width: 860px) {
-  .about__top::before {
+  .start::before {
     clip-path: polygon(100% 0, 100% 27%, 58% 100%, 0 100%, 0 0);
   }
 }
 @media (max-width: 640px) {
-  .about__top::before {
+  .start::before {
     clip-path: polygon(100% 0, 100% 27%, 69% 100%, 0 100%, 0 0);
   }
 }
 @media (max-width: 425px) {
-  .about__top::before {
+  .start::before {
     clip-path: polygon(100% 0, 100% 27%, 100% 100%, 0 100%, 0 0);
     padding-bottom: 4vh;
   }
 }
-.about__top__info {
+.start__info {
   position: relative;
   z-index: 1;
   display: grid;
@@ -222,52 +162,52 @@ a {
   /* Título do Olá! */
 }
 @media (max-width: 425px) {
-  .about__top__info {
+  .start__info {
     grid-template-columns: auto;
     place-items: center;
   }
 }
-.about__top__info__title {
+.start__info__title {
   font-family: "Poppins", sans-serif;
   margin-left: 35px;
   margin-top: 10%;
   height: 150px;
   color: white;
-  font-size: 2em;
+  font-size: 2.45em;
   cursor: default;
   transition: all 1s;
   /* Container do nome com efeito Glitch. */
 }
 @media (max-width: 1024px) {
-  .about__top__info__title {
+  .start__info__title {
     font-size: 1.5em;
   }
 }
 @media (max-width: 860px) {
-  .about__top__info__title {
+  .start__info__title {
     font-size: 1.5em;
   }
 }
 @media (max-width: 640px) {
-  .about__top__info__title {
+  .start__info__title {
     font-size: 1.4em;
     margin-left: 25px;
   }
 }
 @media (max-width: 425px) {
-  .about__top__info__title {
+  .start__info__title {
     font-size: 1em;
     margin-left: 15px;
   }
 }
-.about__top__info__title__name {
-  margin: 15px 0;
+.start__info__title__name {
+  margin-bottom: 30px;
   position: relative;
   height: 65px;
   /* Nome aqui. */
   /* Duas animações, uma para a palavra e outro para as com efeito glitch. */
 }
-.about__top__info__title__name__glitch {
+.start__info__title__name__glitch {
   font-size: 2em;
   position: absolute;
   text-transform: uppercase;
@@ -277,189 +217,153 @@ a {
   /* Cor e propriedades para animação glitch. */
   /* Ani Hover */
 }
-.about__top__info__title__name__glitch::before, .about__top__info__title__name__glitch::after {
+.start__info__title__name__glitch::before, .start__info__title__name__glitch::after {
   content: "LEVI";
   position: absolute;
   top: 0;
   left: 0;
   animation: bug 0.3s linear 2s 5 normal none;
 }
-.about__top__info__title__name__glitch::before {
+.start__info__title__name__glitch::before {
   color: #e91e63;
   z-index: -2;
   animation-direction: normal;
 }
-.about__top__info__title__name__glitch::after {
+.start__info__title__name__glitch::after {
   color: #2196f3;
   z-index: -1;
   animation-direction: reverse;
 }
-.about__top__info__title__name__glitch:hover {
+.start__info__title__name__glitch:hover {
   animation: nameMove 0.3s linear 2s infinite normal none;
 }
-.about__top__info__title__name__glitch:hover::before {
+.start__info__title__name__glitch:hover::before {
   color: #e91e63;
   z-index: -2;
   animation: bug 0.3s linear 2s infinite normal none;
 }
-.about__top__info__title__name__glitch:hover::after {
+.start__info__title__name__glitch:hover::after {
   color: #2196f3;
   z-index: -1;
   animation: bug 0.3s linear 2s infinite reverse none;
 }
-.about__top__info__icon {
+.start__info__icon {
   color: #1F1F1F;
   text-align: right;
-  font-size: 10em;
+  font-size: 13em;
   margin: 35px 35px 0px 0px;
   transition: all 1s;
 }
 @media (max-width: 1024px) {
-  .about__top__info__icon {
-    font-size: 9em;
-    margin: 35px 15px 0px 0px;
+  .start__info__icon {
+    font-size: 10em;
+    margin: 15px 15px 0px 0px;
   }
 }
 @media (max-width: 860px) {
-  .about__top__info__icon {
-    font-size: 8em;
-    margin-top: 53vh;
+  .start__info__icon {
+    font-size: 7em;
+    margin-top: 285px;
   }
 }
 @media (max-width: 640px) {
-  .about__top__info__icon {
+  .start__info__icon {
     font-size: 5em;
-    margin-top: 63vh;
+    margin-top: 320px;
     margin-right: 5px;
   }
 }
 @media (max-width: 425px) {
-  .about__top__info__icon {
+  .start__info__icon {
     margin-top: 15vh;
     color: white;
   }
 }
 
-.about__bottom {
+.about {
+  border-top: 1px solid #3D3D3D;
   background-color: #1F1F1F;
   padding: 35px 0;
 }
-.about__bottom__title {
+.about__title {
   font-family: "Poppins", sans-serif;
   color: white;
   text-align: center;
-  font-size: 2em;
-  padding: 45px 0 15px 0;
-  border-top: 1px solid #3D3D3D;
-}
-@media (max-width: 860px) {
-  .about__bottom__title {
-    font-size: 1.8em;
-  }
+  font-size: 3em;
+  padding: 35px 0;
 }
 @media (max-width: 640px) {
-  .about__bottom__title {
-    font-size: 1.5em;
+  .about__title {
+    font-size: 2.5em;
     padding-bottom: 10px;
   }
 }
 @media (max-width: 425px) {
-  .about__bottom__title {
+  .about__title {
     font-size: 1.2em;
     padding-bottom: 10px;
   }
 }
-.about__bottom__text {
+.about__text {
   color: white;
-  text-indent: 1.5em;
+  text-indent: 5em;
   text-align: justify;
-  padding: 35px 35px;
-  line-height: 50px;
+  line-height: 55px;
+}
+.about__text p {
+  font-size: 1.3em;
 }
 @media (max-width: 860px) {
-  .about__bottom__text {
-    padding: 35px 50px;
-  }
-  .about__bottom__text p {
-    font-size: 0.9em;
+  .about__text p {
+    font-size: 1.2em;
   }
 }
 @media (max-width: 640px) {
-  .about__bottom__text {
-    padding: 15px 45px;
+  .about__text {
+    padding: 0 25px;
+    text-indent: 3em;
+    line-height: 2.5em;
   }
-  .about__bottom__text p {
-    font-size: 0.75em;
+  .about__text p {
+    font-size: 1.15em;
   }
 }
 @media (max-width: 425px) {
-  .about__bottom__text {
+  .about__text {
     padding: 15px 35px;
   }
-  .about__bottom__text p {
-    font-size: 0.65em;
+  .about__text p {
+    font-size: 1;
     line-height: 40px;
   }
-}
-.about__bottom__text p {
-  margin-bottom: 30px;
 }
 
 .knowledge {
   border-top: 1px solid #3D3D3D;
   background-image: url("../../img/repeatBack.png");
-  display: grid;
-  height: fit-content;
-  grid-template-columns: auto auto;
-  padding-bottom: 25px;
-  padding-top: 45px;
+  padding: 35px 0;
 }
 .knowledge__title {
-  grid-column: 1/3;
   font-family: "Poppins", sans-serif;
   color: white;
-  font-size: 2em;
+  font-size: 3em;
   text-align: center;
-  padding: 25px 0 35px 0;
+  padding: 40px 0;
   transition: all 1s;
 }
 @media (max-width: 640px) {
   .knowledge__title {
-    font-size: 1.7em;
+    font-size: 2.5em;
   }
 }
 @media (max-width: 425px) {
   .knowledge__title {
-    font-size: 1.23em;
-    padding-bottom: 5px;
+    font-size: 1.2em;
   }
 }
 .knowledge__selector {
-  display: grid;
-  grid-template-columns: auto auto;
-  place-items: center;
-  gap: 25px;
   padding: 25px;
   transition: all 1s;
-}
-@media (max-width: 860px) {
-  .knowledge__selector {
-    grid-template-columns: auto auto auto;
-    grid-column: 1/3;
-  }
-}
-@media (max-width: 640px) {
-  .knowledge__selector {
-    grid-template-columns: auto auto auto;
-    grid-column: 1/3;
-  }
-}
-@media (max-width: 425px) {
-  .knowledge__selector {
-    gap: 5px;
-    grid-template-columns: auto auto auto;
-    grid-column: 1/3;
-  }
 }
 .knowledge__selector__icons {
   font-size: 4.5em;
@@ -480,82 +384,80 @@ a {
 }
 .knowledge__content__start {
   color: white;
-  line-height: 2em;
+  line-height: 2.3em;
   text-align: justify;
   padding: 0 35px;
+  font-size: 1.15em;
 }
 .knowledge__content__start p {
   margin-bottom: 35px;
 }
 @media (max-width: 860px) {
   .knowledge__content__start p {
-    font-size: 0.9em;
-    width: 110%;
+    font-size: 1.3em;
   }
 }
 @media (max-width: 640px) {
   .knowledge__content__start p {
-    font-size: 0.75em;
-    width: 120%;
+    font-size: 1.15em;
   }
 }
 @media (max-width: 425px) {
   .knowledge__content__start p {
-    font-size: 0.65em;
-    width: 135%;
+    font-size: 1;
   }
 }
 .knowledge__content__info__text {
   color: white;
   padding: 5px 15px;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
   text-align: justify;
   transition: all 1s;
+  font-size: 1.3em;
 }
 @media (max-width: 860px) {
   .knowledge__content__info__text {
-    grid-column: 1/5;
-    font-size: 0.9em;
-    width: 110%;
+    font-size: 1.2em;
   }
 }
 @media (max-width: 640px) {
   .knowledge__content__info__text {
-    grid-column: 1/5;
-    font-size: 0.75em;
-    width: 120%;
+    font-size: 1.15em;
   }
 }
 @media (max-width: 425px) {
   .knowledge__content__info__text {
-    grid-column: 1/3;
-    font-size: 0.65em;
-    box-sizing: border-box;
-    width: 130%;
+    font-size: 1;
   }
 }
 .knowledge__content__info__list {
   color: white;
-  line-height: 2em;
   margin-left: 50px;
   transition: all 1s;
+  font-size: 1.2em;
 }
 .knowledge__content__info__list li {
-  list-style: circle;
+  list-style: none;
+  margin-bottom: 1.1em;
+}
+.knowledge__content__info__list li::before {
+  content: "•";
+  display: inline-block;
+  width: 1em;
 }
 @media (max-width: 860px) {
-  .knowledge__content__info__list li {
-    font-size: 0.9em;
+  .knowledge__content__info__list {
+    font-size: 1.15em;
   }
 }
 @media (max-width: 640px) {
-  .knowledge__content__info__list li {
-    font-size: 0.75em;
+  .knowledge__content__info__list {
+    font-size: 1.1em;
   }
 }
 @media (max-width: 425px) {
-  .knowledge__content__info__list li {
-    bottom: 15px;
+  .knowledge__content__info__list {
+    font-size: 1;
   }
 }
 
@@ -636,6 +538,8 @@ a {
   transition: all 0.8s;
   border: 1px solid transparent;
   border-radius: 15px;
+  width: 1.5em;
+  height: 1.5em;
 }
 @media (max-width: 1024px) {
   #tsIcon {

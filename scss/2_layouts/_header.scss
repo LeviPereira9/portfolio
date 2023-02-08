@@ -2,101 +2,36 @@
 @import "../3_modules/modules.scss";
 
 .menu{
-    background-color: variables.$primary-color;
-    padding: 5px 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 5;
-    
-    &__container{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
+    &__icon{
+        font-size: 1.5em;
+        color: white;
 
-        @include mobiTable{
-            justify-content: space-between;
-        }
-
-        &__icon{
-            width: 200px;
-            text-align: center;
-            padding: 5px 0;
-
-            .icon{
-                font-size: 1.5em;
-                color: variables.$white-color;
-                cursor: pointer;
-
-                @include mobile{
-                    font-size: 1.45em;
-                }
-            }
-        }
-        
-        &__options{
+        .icon{
+            font-size: 1.5em;
             color: variables.$white-color;
-            font-weight: bolder;
-            text-align: center;
-            padding: 5px 0;
-            border-radius: 10px;
             cursor: pointer;
 
-            @include mobiTable{
-                display: none;
-            }
-
-            &:hover{
-                text-decoration: underline;
-            }
-        }
-
-        &__miniMenu{
-            display: none;
-            position: relative;
-            width: 200px;
-            text-align: center;
-            padding: 5px 0;
-
-            @include mobiTable{
-                display: block;
-            }
-
-            .icon{
-                position: relative;
-                z-index: 3;
+            @include mobile{
                 font-size: 1.45em;
-                color: variables.$white-color;
-                cursor: pointer;
-            }
-
-            &__content{
-                position:absolute;
-                z-index: 2;
-                box-sizing: border-box;
-                top: 0px;
-                left: -20px;
-                padding-top: 65px;
-                background-color: variables.$senary-color;
-                width: 110%;
-                height: 35em;
-                border-top-left-radius: 15px;
-                border-bottom-left-radius: 15px;
-                text-align: center;
-
-                &__options{
-                    padding: 25px 0;
-                    color: variables.$white-color;
-                    font-weight: bolder;
-                    border-bottom: 1px solid variables.$white-color;
-                    cursor: pointer;
-                    
-                    &:hover{
-                        text-decoration: underline;
-                    }
-                }
-                
             }
         }
     }
+    
+    &__options{
+        color: variables.$white-color;
+        font-weight: bolder;
+        text-align: center;
+
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+
+}
+
+@media (max-width: 990px) {
+    #navbar-items{
+        border-top: 1px solid white;
+    }
+    
 }

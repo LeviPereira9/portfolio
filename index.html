@@ -1,272 +1,365 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <!-- BI -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <!-- Boot-JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+      defer
+    ></script>
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- CSS -->
-    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/app.css" />
     <!-- JavaScript -->
     <script src="app.js" defer></script>
     <title>Portfólio</title>
-</head>
-<body>
-    <header>
-        <nav class="menu">
-            <ul class="menu__container" >
-                <a href="#aboutTop">
-                    <li class="menu__container__icon"><i class="fa-solid fa-house icon"></i></li>
-                </a>
-                <a href="#aboutBottom">
-                    <li class="menu__container__options">Sobre mim</li>
-                </a>
-                <a href="#knowledges">
-                    <li class="menu__container__options">Conhecimentos</li>
-                </a>
-                <a href="#projects">
-                    <li class="menu__container__options">Projetos</li>
-                </a>
-                <li class="menu__container__miniMenu" > <i class="fa-solid fa-bars icon" id="miniMenu" ></i>
-                    <ul class="menu__container__miniMenu__content hideContent" id="miniMenu__content">
-                        <a href="#aboutBottom">
-                            <li class="menu__container__miniMenu__content__options" >Sobre mim</li>
-                        </a>
-                        <a href="#knowledges">
-                            <li class="menu__container__miniMenu__content__options" >Conhecimentos</li>
-                        </a>
-                        <a href="#projects">
-                            <li class="menu__container__miniMenu__content__options" >Projetos</li>
-                        </a>
-                    </ul>
-                </li>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="sticky-top">
+      <nav class="navbar navbar-dark bg-black navbar-expand-lg menu">
+        <div class="container-fluid container-md">
+          <a href="#start" class="navbar-brand me-5"
+            ><i class="bi bi-house menu__icon"></i
+          ></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbar-items"
+            aria-controls="navbar-items"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="bi bi-list menu__icon"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbar-items">
+            <ul class="navbar-nav">
+              <li class="nav-item me-md-4 menu__options">
+                <a href="#about" class="nav-link">Sobre mim</a>
+              </li>
+              <li class="nav-item me-md-4 menu__options">
+                <a href="#knowledges" class="nav-link">Conhecimentos</a>
+              </li>
+              <li class="nav-item me-md-4 menu__options">
+                <a href="#projects" class="nav-link">Projetos</a>
+              </li>
             </ul>
-            
-        </nav>
+          </div>
+        </div>
+      </nav>
     </header>
+    <!-- Fim da Navbar -->
     <main>
-        <!-- Começo do About -->
-        <article class="about" >
-            <section class="about__top" id="aboutTop">
-                <div class="about__top__info">
-                    <h1 class="about__top__info__title" >
-                        Olá, eu sou o
-                        <div class="about__top__info__title__name" >
-                            <span class="about__top__info__title__name__glitch">Levi</span>
-                        </div>
-                        Desenvolvedor front-end.
-                    </h1>
-                    <i class="fa-brands fa-github about__top__info__icon " ></i>
-                </div>
-            </section>
-            <section class="about__bottom" id="aboutBottom">
-                <h2 class="about__bottom__title" >Sobre mim</h2>
-                <div class="about__bottom__text">
-                    <p>
-                        Meu nome é Levi Pereira da Silva, tenho 22 anos, comecei a estudar programação por indicação de um amigo e acabei me apegando após o primeiro "Hello World".
-                    </p>
-                    <p>
-                        Antes de começar a estudar programação, trabalhei por um ano na área administrativa, como menor aprendiz, após a conclusão de um ano de trabalho, comecei a me dedicar à meus estudos de programação, que hoje completam mais de oito meses.
-                    </p>
-                </div>
-            </section>
-        </article>
-        <!-- Fim do About -->
-        <article class="knowledge" id="knowledges" >
-            <h2 class="knowledge__title" >Conhecimentos</h2>
-            <section class="knowledge__selector">
-                <i class="fa-brands fa-html5 knowledge__selector__icons"  id="html5Icon" onclick="changeContent(0)" ></i>
-                <i class="fa-brands fa-css3-alt knowledge__selector__icons"  id="css3Icon" onclick="changeContent(1)" ></i>
-                <i class="fa-brands fa-square-js knowledge__selector__icons"  id="jsIcon" onclick="changeContent(2)"></i>
-                <i class="fa-brands fa-sass knowledge__selector__icons"  id="sassIcon" onclick="changeContent(3)"></i>
-                <i class="fa-brands fa-react knowledge__selector__icons"  id="reactIcon" onclick="changeContent(4)"></i>
-                <i class="fa-brands fa-git-alt knowledge__selector__icons"  id="gitIcon" onclick="changeContent(5)"></i>
-                <!-- typeScript icon - Não achei no fontawesome... -->
-                <svg id="tsIcon" class="knowledge__selector__icons"  onclick="changeContent(6)" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>TypeScript</title><path d="M1.125 0C.502 0 0 .502 0 1.125v21.75C0 23.498.502 24 1.125 24h21.75c.623 0 1.125-.502 1.125-1.125V1.125C24 .502 23.498 0 22.875 0zm17.363 9.75c.612 0 1.154.037 1.627.111a6.38 6.38 0 0 1 1.306.34v2.458a3.95 3.95 0 0 0-.643-.361 5.093 5.093 0 0 0-.717-.26 5.453 5.453 0 0 0-1.426-.2c-.3 0-.573.028-.819.086a2.1 2.1 0 0 0-.623.242c-.17.104-.3.229-.393.374a.888.888 0 0 0-.14.49c0 .196.053.373.156.529.104.156.252.304.443.444s.423.276.696.41c.273.135.582.274.926.416.47.197.892.407 1.266.628.374.222.695.473.963.753.268.279.472.598.614.957.142.359.214.776.214 1.253 0 .657-.125 1.21-.373 1.656a3.033 3.033 0 0 1-1.012 1.085 4.38 4.38 0 0 1-1.487.596c-.566.12-1.163.18-1.79.18a9.916 9.916 0 0 1-1.84-.164 5.544 5.544 0 0 1-1.512-.493v-2.63a5.033 5.033 0 0 0 3.237 1.2c.333 0 .624-.03.872-.09.249-.06.456-.144.623-.25.166-.108.29-.234.373-.38a1.023 1.023 0 0 0-.074-1.089 2.12 2.12 0 0 0-.537-.5 5.597 5.597 0 0 0-.807-.444 27.72 27.72 0 0 0-1.007-.436c-.918-.383-1.602-.852-2.053-1.405-.45-.553-.676-1.222-.676-2.005 0-.614.123-1.141.369-1.582.246-.441.58-.804 1.004-1.089a4.494 4.494 0 0 1 1.47-.629 7.536 7.536 0 0 1 1.77-.201zm-15.113.188h9.563v2.166H9.506v9.646H6.789v-9.646H3.375z"/></svg>
-            </section>
-            <section class="knowledge__content">
-                <div class="knowledge__content__start">
-                    <p>
-                        Meus conhecimentos em programação foram adquiridos seguindo um roadmap fornecido pela comunidade de desenvolvedores Brasileira, onde no momento, estou na metade do caminho para o aprender tudo que é necessário para um  desenvolvedor front-end completo.
-                    </p>
-                    <p>
-                        Para saber mais informações, sobre algumas das ferramentas que possuo conhecimento, clique no ícone correspondente.
-                    </p>
-                </div>
-                <div class="knowledge__content__info hideContent"  >
-                    <p class="knowledge__content__info__text" >Em HTML5, tenho conhecimentos na sua utilização na arquitetura do site e boas práticas, incluindo:</p>
-                    <ul class="knowledge__content__info__list" >
-                        <li>SEO (Otimização para motores de busca);</li>
-                        <li>HTML5 Semântico;</li>
-                        <li>Formulários e Validações;</li>
-                        <li>Acessibilidade.</li>
-                    </ul>
-                </div>
-                <div class="knowledge__content__info hideContent ">
-                    <p class="knowledge__content__info__text">Em CSS3, tenho conhecimento sobre arquitetura CSS, manipulação de estilo, posicionamento e design responsivo, incluindo:</p>
-                    <ul class="knowledge__content__info__list" >
-                        <li>Criar Layouts;</li>
-                        <li>Design Responsivo;</li>
-                        <li>Media Queries;</li>
-                        <li>Flexbox</li>
-                        <li>CSS Grid;</li>
-                        <li>Arquitetura BEM.</li>
-                    </ul>
-                </div>
-                <div class="knowledge__content__info hideContent ">
-                    <p class="knowledge__content__info__text">Em JavaScript, tenho conhecimento sobre manipulação de DOM, como os eventos, o básico de ECMAScript 6 e outros conceitos, incluindo:</p>
-                    <ul class="knowledge__content__info__list ">
-                        <li>Sintaxes e Construtores Básicos;</li>
-                        <li>Manipulação de DOM</li>
-                        <li>Fetch API;</li>
-                        <li>JSON;</li>
-                        <li>Classes.</li>
-                    </ul>
-                </div>
-                <div class="knowledge__content__info hideContent">
-                    <p class="knowledge__content__info__text">Em SASS, tenho conhecimento sobre, além da arquitetura SMACSS, as diversas funcionalidades que o pré-processador tem a oferecer, incluindo:</p>
-                    <ul class="knowledge__content__info__list">
-                        <li>Variáveis;</li>
-                        <li>Parent Select;</li>
-                        <li>Placeholder;</li>
-                        <li>Mixins;</li>
-                        <li>Nesting;</li>
-                        <li>Herança.</li>
-                    </ul>
-                </div>
-                <div class="knowledge__content__info hideContent ">
-                    <p class="knowledge__content__info__text">Em ReactJs ainda estou aprendendo, tenho o conhecimento fundamentais para criar uma aplicação em React , mas ainda tenho muito a aprender e dentro do que já conheço, inclui:</p>
-                    <ul class="knowledge__content__info__list">
-                        <li>Components;</li>
-                        <li>Hooks;</li>
-                        <li>Custom Hooks;</li>
-                        <li>Props;</li>
-                        <li>Prop Children;</li>
-                        <li>React Router;</li>
-                        <li>Context API.</li>
-                    </ul>
-                </div>
-                <div class="knowledge__content__info hideContent">
-                    <p class="knowledge__content__info__text">Em GIT, tenho os conhecimentos básicos sobre o versionamento do código, incluindo:</p>
-                    <ul class="knowledge__content__info__list">
-                        <li>Branch;</li>
-                        <li>Merge;</li>
-                        <li>Commits;</li>
-                        <li>Pull;</li>
-                        <li>Push.</li>
-                    </ul>
-                </div>
-                <div class="knowledge__content__info hideContent">
-                    <p class="knowledge__content__info__text">Em Typescript, tenho os conhecimentos básicos sobre a tipagem e o uso conjunto com React, incluindo:</p>
-                    <ul class="knowledge__content__info__list">
-                        <li>Interfaces;</li>
-                        <li>Narrowing;</li>
-                        <li>Generic</li>
-                        <li>Object Types</li>
-                        <li>Criação de Tipos</li>
-                        <li>Decorators</li>
-                    </ul>
-                </div>
-            </section>
-        </article>
-        <article class="projects" id="projects">
-            <h2 class="projects__title">Projetos</h2>
-            <!-- Projeto 01: Grandes Mentes -->
-            <section class="projects__container">
-                <div class="projects__container__top">
-                    <div class="projects__container__top__full">
-                        <i class="fa-brands fa-react"></i>
-                    </div>
-                    <div class="projects__container__top__circle">
-                        <i class="fa-solid fa-brain"></i>
-                    </div>
-                </div>
-                <div class="projects__container__content backgroundGM">
-                    <h1 class="projects__container__content__title">
-                        Projeto Grandes Mentes
-                    </h1>
-                    <p class="projects__container__content__text">
-                        O Projeto Grandes Mentes, consiste no consumo da API o Pensador em Conjuto com a biblioteca do React, na aplicação criada, temos quatro filósofos que com a API, retornamos uma frase aleatória do pensador quando o usuário desejar.
-                    </p>
-                    <div class="projects__container__content__buttons">
-                        <a href="https://project-grandesmentes.vercel.app/" target="_blank">
-                            <button class="site">
-                                <i class="fa-solid fa-link"></i>
-                                Site 
-                            </button>
-                        </a>
-                        <a href="https://github.com/LeviPereira9/frases" target="_blank">
-                            <button class="git">
-                                <i class="fa-brands fa-github-alt"></i>
-                                Código
-                            </button></a>
-                    </div>
-                </div>
-                <div class="projects__container__tools">
-                    <p>Tecnologias usadas: HTML5, SCSS, REACT.</p>
-                </div>
-            </section>
-            <!-- Projeto02: Em breve... -->
-            <section class="projects__container">
-                <div class="projects__container__top">
-                    <div class="projects__container__top__full">
-                    </div>
-                    <div class="projects__container__top__circle">
-
-                    </div>
-                </div>
-                <div class="projects__container__content backgroundEmpty">
-                    <h1 class="projects__container__content__title">
-                        Em breve...
-                    </h1>
-                    <p class="projects__container__content__text textEmpty">
-                        
-                    </p>
-                    <div class="projects__container__content__buttons buttonEmpty">
-                        <button class="site"><i class="fa-solid fa-link"></i> Site </button>
-                        <button class="git"><i class="fa-brands fa-github-alt"></i> Código</button>
-                    </div>
-                </div>
-                <div class="projects__container__tools">
-                    <p>Tecnologias usadas: Em breve...</p>
-                </div>
-            </section>
-            <!-- Projeto03: Em breve...  -->
-            <section class="projects__container">
-                <div class="projects__container__top">
-                    <div class="projects__container__top__full">
-                    </div>
-                    <div class="projects__container__top__circle">
-                    </div>
-                </div>
-                <div class="projects__container__content backgroundEmpty">
-                    <h1 class="projects__container__content__title">
-                        Em breve...
-                    </h1>
-                    <p class="projects__container__content__text textEmpty">
-                        
-                    </p>
-                    <div class="projects__container__content__buttons buttonEmpty">
-                        <button class="site"><i class="fa-solid fa-link"></i> Site </button>
-                        <button class="git"><i class="fa-brands fa-github-alt"></i> Código</button>
-                    </div>
-                </div>
-                <div class="projects__container__tools">
-                    <p>Tecnologias usadas: Em breve...</p>
-                </div>
-            </section>
-        </article>
+      <!-- Introdução -->
+      <article>
+        <section class="start" id="start">
+          <div class="start__info">
+            <h1 class="start__info__title">
+              Olá, eu sou o
+              <div class="start__info__title__name">
+                <span class="start__info__title__name__glitch">Levi</span>
+              </div>
+              Desenvolvedor front-end.
+            </h1>
+            <i class="fa-brands fa-github start__info__icon"></i>
+          </div>
+        </section>
+        <!-- Fim da introdução -->
+        <!-- Sobre mim -->
+        <section class="about" id="about">
+          <div class="container">
+            <h2 class="about__title">Sobre mim</h2>
+            <div class="about__text">
+              <p>
+                Meu nome é Levi Pereira da Silva, tenho 23 anos, comecei a
+                estudar programação por indicação de um amigo e acabei me
+                apegando após o primeiro "Hello World". Sou um desenvolvedor
+                front-end apaixonado e dedicado, com um ano de experiência em
+                projetos de cursos e também em um projeto pessoal que demonstra
+                minha capacidade de trabalhar de forma autônoma.
+              </p>
+              <p>
+                Com conhecimentos em ferramentas e linguagens fundamentais do
+                front-end, estou sempre em busca de expandir meus conhecimentos
+                e habilidades. Além disso, tenho uma experiência anterior como
+                auxiliar de escritório, o que me permitiu desenvolver
+                habilidades de trabalho em equipe e organização.
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- Fim sobre mim -->
+      </article>
+      <!-- Conhecimentos -->
+      <article class="knowledge" id="knowledges">
+        <h2 class="knowledge__title">Conhecimentos</h2>
+        <div class="row container-fluid">
+          <section class="row knowledge__selector col-12 col-md-4">
+            <div class="col-3 col-md-6">
+              <i
+                class="fa-brands fa-html5 knowledge__selector__icons"
+                id="html5Icon"
+                role="button"
+                onclick="changeContent(0)"
+              ></i>
+            </div>
+            <div class="col-3 col-md-6">
+              <i
+                class="fa-brands fa-css3-alt knowledge__selector__icons"
+                id="css3Icon"
+                role="button"
+                onclick="changeContent(1)"
+              ></i>
+            </div>
+            <div class="col-3 col-md-6">
+              <i
+                class="fa-brands fa-square-js knowledge__selector__icons"
+                id="jsIcon"
+                role="button"
+                onclick="changeContent(2)"
+              ></i>
+            </div>
+            <div class="col-3 col-md-6">
+              <i
+                class="fa-brands fa-sass knowledge__selector__icons"
+                id="sassIcon"
+                role="button"
+                onclick="changeContent(3)"
+              ></i>
+            </div>
+            <div class="col-3 col-md-6">
+              <i
+                class="fa-brands fa-react knowledge__selector__icons"
+                id="reactIcon"
+                role="button"
+                onclick="changeContent(4)"
+              ></i>
+            </div>
+            <div class="col-3 col-md-6">
+              <i
+                class="fa-brands fa-git-alt knowledge__selector__icons"
+                id="gitIcon"
+                role="button"
+                onclick="changeContent(5)"
+              ></i>
+            </div>
+            <div class="col-3 col-md-6">
+              <svg
+                id="tsIcon"
+                class="knowledge__selector__icons"
+                onclick="changeContent(6)"
+                role="button"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>TypeScript</title>
+                <path
+                  d="M1.125 0C.502 0 0 .502 0 1.125v21.75C0 23.498.502 24 1.125 24h21.75c.623 0 1.125-.502 1.125-1.125V1.125C24 .502 23.498 0 22.875 0zm17.363 9.75c.612 0 1.154.037 1.627.111a6.38 6.38 0 0 1 1.306.34v2.458a3.95 3.95 0 0 0-.643-.361 5.093 5.093 0 0 0-.717-.26 5.453 5.453 0 0 0-1.426-.2c-.3 0-.573.028-.819.086a2.1 2.1 0 0 0-.623.242c-.17.104-.3.229-.393.374a.888.888 0 0 0-.14.49c0 .196.053.373.156.529.104.156.252.304.443.444s.423.276.696.41c.273.135.582.274.926.416.47.197.892.407 1.266.628.374.222.695.473.963.753.268.279.472.598.614.957.142.359.214.776.214 1.253 0 .657-.125 1.21-.373 1.656a3.033 3.033 0 0 1-1.012 1.085 4.38 4.38 0 0 1-1.487.596c-.566.12-1.163.18-1.79.18a9.916 9.916 0 0 1-1.84-.164 5.544 5.544 0 0 1-1.512-.493v-2.63a5.033 5.033 0 0 0 3.237 1.2c.333 0 .624-.03.872-.09.249-.06.456-.144.623-.25.166-.108.29-.234.373-.38a1.023 1.023 0 0 0-.074-1.089 2.12 2.12 0 0 0-.537-.5 5.597 5.597 0 0 0-.807-.444 27.72 27.72 0 0 0-1.007-.436c-.918-.383-1.602-.852-2.053-1.405-.45-.553-.676-1.222-.676-2.005 0-.614.123-1.141.369-1.582.246-.441.58-.804 1.004-1.089a4.494 4.494 0 0 1 1.47-.629 7.536 7.536 0 0 1 1.77-.201zm-15.113.188h9.563v2.166H9.506v9.646H6.789v-9.646H3.375z"
+                />
+              </svg>
+            </div>
+            <div class="col-3 col-md-6">
+              <i
+                class="fa-brands fa-bootstrap knowledge__selector__icons"
+                id="gitIcon"
+                onclick="changeContent(7)"
+              ></i>
+            </div>
+          </section>
+          <!-- Text -->
+          <section class="col-12 col-md-8 knowledge__content">
+            <div class="knowledge__content__start">
+              <p>
+                Meus conhecimentos em programação foram obtidos ao seguir um
+                roteiro fornecido pela comunidade de desenvolvedores
+                brasileiros. Atualmente, estou no meio do caminho para me tornar
+                um desenvolvedor front-end completo. Para obter mais informações
+                sobre algumas das minhas habilidades, basta clicar no ícone
+                relevante.
+              </p>
+              <p>
+                Estou constantemente buscando novas formas de me aperfeiçoar e
+                estender meus conhecimentos na área de desenvolvimento de
+                software. Acredito na importância de estar sempre atualizado e
+                disposto a aprender coisas novas. Estou animado para continuar
+                crescendo profissionalmente e oferecer soluções eficientes aos
+                meus futuros projetos e clientes.
+              </p>
+            </div>
+            <!-- HTML -->
+            <div class="knowledge__content__info hideContent">
+              <p class="knowledge__content__info__text">
+                Em HTML5, tenho uma boa compreensão da arquitetura de sites,
+                incluindo boas práticas para:
+              </p>
+              <ul class="knowledge__content__info__list">
+                <li>Otimização de SEO para motores de busca;</li>
+                <li>Utilização do HTML5 semântico;</li>
+                <li>Criação de formulários com validações eficientes;</li>
+                <li>
+                  Implementação de acessibilidade para garantir a experiência do
+                  usuário para todos.
+                </li>
+              </ul>
+            </div>
+            <!-- CSS -->
+            <div class="knowledge__content__info hideContent">
+              <p class="knowledge__content__info__text">
+                Em CSS3, tenho amplo conhecimento em arquitetura de folhas de
+                estilo, manipulação de estilo, posicionamento e design
+                responsivo, incluindo:
+              </p>
+              <ul class="knowledge__content__info__list">
+                <li>Desenvolvimento de layouts versáteis e atrativos;</li>
+                <li>Implementação de design responsivo;</li>
+                <li>
+                  Aplicação de Flexbox e CSS Grid para garantir uma distribuição
+                  precisa dos elementos da página;
+                </li>
+                <li>
+                  Adoção da metodologia BEM (Block, Element, Modifier) na
+                  arquitetura de estilo
+                </li>
+              </ul>
+            </div>
+            <!-- JavaScript -->
+            <div class="knowledge__content__info hideContent">
+              <p class="knowledge__content__info__text">
+                Em JavaScript, tenho profundo conhecimento na manipulação do
+                DOM, incluindo conceitos como:
+              </p>
+              <ul class="knowledge__content__info__list">
+                <li>A utilização das Sintaxes e Construtores Básicos;</li>
+                <li>A mecânica e criação de Eventos;</li>
+                <li>Requições HTTP assíncronas através da Fetch API;</li>
+                <li>
+                  Entendo como manipular JSON para compartilhar informações
+                  entre aplicações;
+                </li>
+                <li>
+                  Compreendo como trabalhar com Classes, para criar objetos com
+                  diferentes comportamentos e propriedades.
+                </li>
+              </ul>
+            </div>
+            <!-- SASS -->
+            <div class="knowledge__content__info hideContent">
+              <p class="knowledge__content__info__text">
+                Em SASS, tenho conhecimento na utilização da arquitetura SMACSS
+                e de suas diversas funcionalidades, como:
+              </p>
+              <ul class="knowledge__content__info__list">
+                <li>Uso de variáveis para padronização de estilos</li>
+                <li>Seleção de elementos com Parent Select;</li>
+                <li>Otimização com Placeholder;</li>
+                <li>Reutilização de estilos com Mixins;</li>
+                <li>Organização de código com Nesting;</li>
+                <li>Aproveitamento de estilos com Herança.</li>
+              </ul>
+            </div>
+            <!-- React -->
+            <div class="knowledge__content__info hideContent">
+              <p class="knowledge__content__info__text">
+                Em ReactJS, apesar de ainda estar em fase de aprendizado, tenho
+                conhecimentos fundamentais para criar aplicações utilizando este
+                framework. Dentre minhas habilidades estão:
+              </p>
+              <ul class="knowledge__content__info__list">
+                <li>Trabalhar com Components;</li>
+                <li>Uso de Hooks, incluindo Custom Hooks;</li>
+                <li>
+                  Passar informações entre componentes através de Props e Prop
+                  Children;
+                </li>
+                <li>
+                  Implementação do React Router para navegação entre página;
+                </li>
+                <li>
+                  Uso da Context API para compartilhamento de estados entre
+                  componentes.
+                </li>
+              </ul>
+            </div>
+            <div class="knowledge__content__info hideContent">
+              <p class="knowledge__content__info__text">
+                Em GIT, tenho os conhecimentos básicos sobre o versionamento do
+                código, incluindo:
+              </p>
+              <ul class="knowledge__content__info__list">
+                <li>Branch;</li>
+                <li>Merge;</li>
+                <li>Commits;</li>
+                <li>Pull;</li>
+                <li>Push.</li>
+              </ul>
+            </div>
+            <!-- TypeScript -->
+            <div class="knowledge__content__info hideContent">
+              <p class="knowledge__content__info__text">
+                Em Typescript, tenho conhecimento básico da tipagem e de sua
+                utilização em conjunto com React. As minhas habilidades incluem:
+              </p>
+              <ul class="knowledge__content__info__list">
+                <li>Uso de Interfaces para definição de tipos de dados;</li>
+                <li>Aplicação de Narrowing para restrição de tipos;</li>
+                <li>Compreendendo e utilizando tipos Genéricos;</li>
+                <li>
+                  Conhecimento de Object Types para definição de tipos
+                  complexos;
+                </li>
+                <li>Capacidade de criar Tipos personalizados;</li>
+                <li>
+                  Utilização de Decorators para anexar metadados aos tipos.
+                </li>
+              </ul>
+            </div>
+            <!-- Bootstrap -->
+            <div class="knowledge__content__info hideContent">
+              <p class="knowledge__content__info__text">
+                Em Bootstrap, tenho conhecimento sobre a arquitetura e os
+                componentes do framework, incluindo:
+              </p>
+              <ul class="knowledge__content__info__list">
+                <li>Grid System;</li>
+                <li>
+                  Componentes Pré-Definidos (Navbar, Jumbotron, Cards, etc);
+                </li>
+                <li>Formulários e validação;</li>
+                <li>
+                  Estilização Avançada (Utilização de classes utilitárias e
+                  Helpers);
+                </li>
+                <li>Integração com JavaScript Plugins.</li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </article>
+      <!-- Fim dos conhecimentos -->
     </main>
-    <footer class="footer" >
-        <h2 class="footer__copy" >
-            Portfólio &copy 2022
-        </h2>
-        <ul class="footer__links">
-            <li> <a href="https://github.com/LeviPereira9/LeviPereira9" target="_blank"><i class="fa-brands fa-square-github github"></i></a> </li>
-            <li> <a href="https://www.linkedin.com/in/levi-pereira-da-silva-61303a193/"><i class="fa-brands fa-linkedin linkedin"></i> </a></li>
-            <li> <a href="https://twitter.com/LeviPereira09"><i class="fa-brands fa-square-twitter twitter"></i></a> </li>
-        </ul>
-    </footer>
-</body>
+  </body>
 </html>

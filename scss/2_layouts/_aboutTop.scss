@@ -1,180 +1,178 @@
 @use "../1_base/variables";
 @import "../3_modules/modules.scss";
 
-.about{
+.start{
+    padding-top: 98px;
+    position: relative;
+    height: 90vh;
+    background-color: variables.$quinary-color;
 
-    &__top{
-        padding-top: 98px;
+    /* Formato de decoração no background. */
+    &::before{
+        content: "Scroll Down ▼ ";
+        font-size: 1.5em;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        background-color: variables.$tertiary-color;
+        color: variables.$senary-color;
+        width: 100%;
+        height: 100%;
+        padding-bottom: 4.5vh;
+        box-sizing: border-box;
+        position: absolute;
+        top: 0px;
+        z-index: 0;
+        clip-path: polygon(50% 0%, 100% 100%, 50% 100%, 0 100%, 0 0);
+        transition: all 1s;
+
+
+        @include tablet{
+            clip-path: polygon(100% 0, 100% 27%, 58% 100%, 0 100%, 0 0);
+        }
+
+        @include mobiTable{
+            clip-path: polygon(100% 0, 100% 27%, 69% 100%, 0 100%, 0 0);
+        }
+
+        @include mobile{
+            clip-path: polygon(100% 0, 100% 27%, 100% 100%, 0 100%, 0 0);
+            padding-bottom: 4vh;
+        }
+    }
+
+    /* Conteúdo dentro da parte superior. */
+    &__info{
         position: relative;
-        height: 85vh;
-        background-color: variables.$quinary-color;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: auto auto;
 
-        /* Formato de decoração no background. */
-        &::before{
-            content: "Scroll Down ▼ ";
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
-            background-color: variables.$tertiary-color;
-            color: variables.$senary-color;
-            width: 100%;
-            height: 100%;
-            padding-bottom: 4.5vh;
-            box-sizing: border-box;
-            position: absolute;
-            top: 0px;
-            z-index: 0;
-            clip-path: polygon(50% 0%, 100% 100%, 50% 100%, 0 100%, 0 0);
+        @include mobile{
+            grid-template-columns: auto;
+            place-items: center;
+        }
+        
+        /* Título do Olá! */
+        &__title{
+            font-family: variables.$title-font;
+            margin-left: 35px;
+            margin-top: 10%;
+            height: 150px;
+            color: variables.$white-color;
+            font-size: 2.45em;
+            cursor: default;
             transition: all 1s;
 
-
+            @include tabDesk{
+                font-size: 1.5em;
+            }
+            
             @include tablet{
-                clip-path: polygon(100% 0, 100% 27%, 58% 100%, 0 100%, 0 0);
+                font-size: 1.5em;
             }
 
             @include mobiTable{
-                clip-path: polygon(100% 0, 100% 27%, 69% 100%, 0 100%, 0 0);
+                font-size: 1.4em;
+                margin-left: 25px;
             }
 
             @include mobile{
-                clip-path: polygon(100% 0, 100% 27%, 100% 100%, 0 100%, 0 0);
-                padding-bottom: 4vh;
+                font-size: 1em;
+                margin-left: 15px;
             }
-        }
 
-        /* Conteúdo dentro da parte superior. */
-        &__info{
-            position: relative;
-            z-index: 1;
-            display: grid;
-            grid-template-columns: auto auto;
-
-            @include mobile{
-                grid-template-columns: auto;
-                place-items: center;
-            }
-            
-            /* Título do Olá! */
-            &__title{
-                font-family: variables.$title-font;
-                margin-left: 35px;
-                margin-top: 10%;
-                height: 150px;
-                color: variables.$white-color;
-                font-size: 2em;
-                cursor: default;
-                transition: all 1s;
-
-                @include tabDesk{
-                    font-size: 1.5em;
-                }
+            /* Container do nome com efeito Glitch. */
+            &__name{
+                margin-bottom: 30px;
+                position: relative;
+                height: 65px;
                 
-                @include tablet{
-                    font-size: 1.5em;
-                }
-
-                @include mobiTable{
-                    font-size: 1.4em;
-                    margin-left: 25px;
-                }
-
-                @include mobile{
-                    font-size: 1em;
-                    margin-left: 15px;
-                }
-
-                /* Container do nome com efeito Glitch. */
-                &__name{
-                    margin: 15px 0;
-                    position: relative;
-                    height: 65px;
+                
+                /* Nome aqui. */
+                /* Duas animações, uma para a palavra e outro para as com efeito glitch. */
+                &__glitch{
+                    font-size: 2em;
+                    position: absolute;
+                    text-transform: uppercase;
+                    letter-spacing: 3px;
+                    animation: nameMove .3s linear 2s 5 normal none;
                     
-                    
-                    /* Nome aqui. */
-                    /* Duas animações, uma para a palavra e outro para as com efeito glitch. */
-                    &__glitch{
-                        font-size: 2em;
+                    /* Load Ani */
+                    &::before, &::after{
+                        content: "LEVI";
                         position: absolute;
-                        text-transform: uppercase;
-                        letter-spacing: 3px;
-                        animation: nameMove .3s linear 2s 5 normal none;
-                        
-                        /* Load Ani */
-                        &::before, &::after{
-                            content: "LEVI";
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            animation: bug .3s linear 2s 5 normal none;
-                        }
+                        top: 0;
+                        left: 0;
+                        animation: bug .3s linear 2s 5 normal none;
+                    }
 
-                        /* Cor e propriedades para animação glitch. */
-                        &::before{
-                            color: #e91e63;
-                            z-index: -2;
-                            animation-direction: normal;
-                        }
+                    /* Cor e propriedades para animação glitch. */
+                    &::before{
+                        color: #e91e63;
+                        z-index: -2;
+                        animation-direction: normal;
+                    }
 
-                        &::after{
-                            color: #2196f3;
-                            z-index: -1 ;
-                            animation-direction: reverse;
-                        }
-                        
-                        /* Ani Hover */
-                        &:hover{
-                            animation: nameMove .3s linear 2s infinite normal none;
-                        }
-                        
-                        &:hover::before{
-                            color: #e91e63;
-                            z-index: -2;
-                            animation: bug .3s linear 2s infinite normal none;
-                        }
-                        
-                        &:hover::after{
-                            color: #2196f3;
-                            z-index: -1 ;
-                            animation: bug .3s linear 2s infinite reverse none;
-                        }
+                    &::after{
+                        color: #2196f3;
+                        z-index: -1 ;
+                        animation-direction: reverse;
+                    }
+                    
+                    /* Ani Hover */
+                    &:hover{
+                        animation: nameMove .3s linear 2s infinite normal none;
+                    }
+                    
+                    &:hover::before{
+                        color: #e91e63;
+                        z-index: -2;
+                        animation: bug .3s linear 2s infinite normal none;
+                    }
+                    
+                    &:hover::after{
+                        color: #2196f3;
+                        z-index: -1 ;
+                        animation: bug .3s linear 2s infinite reverse none;
                     }
                 }
             }
-            
-            &__icon{
-                color: variables.$tertiary-color;
-                text-align: right;
+        }
+        
+        &__icon{
+            color: variables.$tertiary-color;
+            text-align: right;
+            font-size: 13em;
+            margin: 35px 35px 0px 0px;
+            transition: all 1s;
+
+            @include tabDesk{
                 font-size: 10em;
-                margin: 35px 35px 0px 0px;
-                transition: all 1s;
-
-                @include tabDesk{
-                    font-size: 9em;
-                    margin: 35px 15px 0px 0px;
-                }
-                
-                @include tablet{
-                    font-size: 8em;
-                    margin-top: 53vh;
-                }
-
-                @include mobiTable{
-                    font-size: 5em;
-                    margin-top: 63vh;
-                    margin-right: 5px;
-                }
-
-                @include mobile{
-                    margin-top: 15vh;
-                    color: white;
-                }
+                margin: 15px 15px 0px 0px;
             }
             
-            
-            
-        }
+            @include tablet{
+                font-size: 7em;
+                margin-top: 285px;
+            }
 
+            @include mobiTable{
+                font-size: 5em;
+                margin-top: 320px;
+                margin-right: 5px;
+            }
+
+            @include mobile{
+                margin-top: 15vh;
+                color: white;
+            }
+        }
+        
+        
         
     }
+
     
 }
+    
