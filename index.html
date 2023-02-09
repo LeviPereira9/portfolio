@@ -43,7 +43,7 @@
       <nav class="navbar navbar-dark bg-black navbar-expand-lg menu">
         <div class="container-fluid container-md">
           <a href="#start" class="navbar-brand me-5"
-            ><i class="bi bi-house menu__icon"></i
+            ><i class="bi bi-house-fill menu__icon"></i
           ></a>
           <button
             class="navbar-toggler"
@@ -185,7 +185,7 @@
             <div class="col-3 col-md-6">
               <i
                 class="fa-brands fa-bootstrap knowledge__selector__icons"
-                id="gitIcon"
+                id="bsIcon"
                 onclick="changeContent(7)"
               ></i>
             </div>
@@ -360,6 +360,170 @@
         </div>
       </article>
       <!-- Fim dos conhecimentos -->
+      <!-- Projetos -->
+      <article class="container-fluid projects" id="projects">
+        <h2 class="projects__title">Projetos</h2>
+        <div class="row justify-content-around">
+          <!-- Projeto 1 -  Grandes Mentes -->
+          <div class="col-10 col-sm-10 col-md-6 col-lg-3 mb-4">
+            <div class="card projects__container">
+              <div class="card-header projects__container__header">
+                <i class="fa-brands fa-react me-2 react__icon"></i>
+                <i class="fa-brands fa-sass me-2 sass__icon"></i>
+                <i
+                  class="fa-solid fa-brain projects__container__header__icon1"
+                  id="gm__icon"
+                ></i>
+              </div>
+              <img
+                src="img/maquiavel_background.jpg"
+                alt="Projeto Grandes Mentes"
+                class="card-img-top"
+              />
+              <div class="card-body projects__container__body">
+                <h5 class="card-title text-center">Grandes Mentes</h5>
+                <p class="card-text">
+                  O projeto "Grandes Mentes" tem como propósito utilizar a API
+                  do "Pensador" para apresentar ao usuário frases reflexivas e
+                  inspiradoras de quatro famosos filósofos. Ao solicitar, uma
+                  citação aleatória será exibida na tela.
+                </p>
+                <div class="d-flex justify-content-center">
+                  <div
+                    class="btn-group"
+                    role="group"
+                    aria-label="project navegation"
+                  >
+                    <a
+                      href="https://project-grandesmentes.vercel.app/"
+                      target="_blank"
+                      class="btn projects__container__body__buttons"
+                    >
+                      <i class="bi bi-link"> Site</i>
+                    </a>
+                    <a
+                      href="https://github.com/LeviPereira9/frases"
+                      class="btn projects__container__body__buttons"
+                    >
+                      <i class="bi bi-github"> Código</i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="card-footer align-items-center projects__container__footer"
+              >
+                <p>Tecnologias usadas: HTML5, SCSS, REACT.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Fim do Projeto Grandes Mentes -->
+          <!-- Futuro projeto -->
+          <div class="col-10 col-sm-10 col-md-6 col-lg-3 mb-4">
+            <div class="card projects__container">
+              <div class="card-header projects__container__header">
+                <i class="bi bi-wind wind__icon null__icon"></i>
+                <i
+                  class="bi bi-cloud-drizzle-fill projects__container__header__icon1 null__icon"
+                ></i>
+              </div>
+              <img
+                src="img/backgroundEmpty.png"
+                alt="Projeto Grandes Mentes"
+                class="card-img-top"
+              />
+              <div class="card-body projects__container__body">
+                <h5 class="card-title text-center">Em breve...</h5>
+                <p class="card-text">...</p>
+
+                <div class="d-flex justify-content-center">
+                  <div
+                    class="btn-group"
+                    role="group"
+                    aria-label="project navegation"
+                  >
+                    <a href="#" class="btn projects__container__body__buttons">
+                      <i class="bi bi-link"> Site</i>
+                    </a>
+                    <a href="#" class="btn projects__container__body__buttons">
+                      <i class="bi bi-github"> Código</i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="card-footer align-items-center projects__container__footer"
+              >
+                <p>Tecnologias usadas: ...</p>
+              </div>
+            </div>
+          </div>
+          <!-- Futuro Projeto -->
+          <div class="col-10 col-sm-10 col-md-6 col-lg-3 mb-4">
+            <div class="card projects__container">
+              <div class="card-header projects__container__header">
+                <i class="bi bi-wind wind__icon null__icon"></i>
+                <i
+                  class="bi bi-cloud-drizzle-fill projects__container__header__icon1 null__icon"
+                ></i>
+              </div>
+              <img
+                src="img/backgroundEmpty.png"
+                alt="Projeto Grandes Mentes"
+                class="card-img-top"
+              />
+              <div class="card-body projects__container__body">
+                <h5 class="card-title text-center">Em breve...</h5>
+                <p class="card-text">...</p>
+
+                <div class="d-flex justify-content-center">
+                  <div
+                    class="btn-group"
+                    role="group"
+                    aria-label="project navegation"
+                  >
+                    <a href="#" class="btn projects__container__body__buttons">
+                      <i class="bi bi-link"> Site</i>
+                    </a>
+                    <a href="#" class="btn projects__container__body__buttons">
+                      <i class="bi bi-github"> Código</i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="card-footer align-items-center projects__container__footer"
+              >
+                <p>Tecnologias usadas: ...</p>
+              </div>
+            </div>
+          </div>
+          <!-- Futuro Projeto -->
+        </div>
+      </article>
+      <!-- Fim dos projetos -->
     </main>
+    <footer class="container-fluid footer">
+      <h2 class="footer__copy">Portfólio &copy 2022</h2>
+      <ul class="footer__links">
+        <li>
+          <a href="https://github.com/LeviPereira9" target="_blank"
+            ><i class="fa-brands fa-square-github github"></i
+          ></a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/levi-pereira-da-silva-61303a193/"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin linkedin"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/LeviPereira09" target="_blank"
+            ><i class="fa-brands fa-square-twitter twitter"></i
+          ></a>
+        </li>
+      </ul>
+    </footer>
   </body>
 </html>

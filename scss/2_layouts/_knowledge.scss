@@ -212,15 +212,23 @@
     border-radius: 15px;
     width: 1.5em;
     height: 1.5em;
-
-    @include tabDesk{
-        width: 1em;
-        height: 1em;
-    }
     
     &:hover{
         border: 1px solid black;
         background-color: variables.$ts-color;
         fill: white;
+    }
+}
+
+#bsIcon{
+    color: variables.$bs-color;
+    transition: all .8s;
+    border: 1px solid transparent;
+    border-radius: 15px;
+
+    &:hover{
+        border: 1px solid black;
+        background-color: variables.$bs-color;
+        color: white;
     }
 }
