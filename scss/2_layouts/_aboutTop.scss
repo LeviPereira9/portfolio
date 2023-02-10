@@ -7,7 +7,7 @@
     height: 90vh;
     background-color: variables.$quinary-color;
 
-    /* Formato de decoração no background. */
+    //Formatação de decoração background
     &::before{
         content: "Scroll Down ▼ ";
         font-size: 1.5em;
@@ -41,7 +41,7 @@
         }
     }
 
-    /* Conteúdo dentro da parte superior. */
+    //Conteúdo dentro da introdução.
     &__info{
         position: relative;
         z-index: 1;
@@ -53,14 +53,14 @@
             place-items: center;
         }
         
-        /* Título do Olá! */
+        //Título olá.
         &__title{
             font-family: variables.$title-font;
             margin-left: 35px;
             margin-top: 10%;
             height: 150px;
             color: variables.$white-color;
-            font-size: 2.45em;
+            font-size: 2.4em;
             cursor: default;
             transition: all 1s;
 
@@ -69,28 +69,36 @@
             }
             
             @include tablet{
-                font-size: 1.5em;
+                font-size: 1.8em;
             }
 
             @include mobiTable{
-                font-size: 1.4em;
+                font-size: 1.8em;
                 margin-left: 25px;
             }
 
             @include mobile{
-                font-size: 1em;
+                font-size: 1.6em;
                 margin-left: 15px;
             }
 
-            /* Container do nome com efeito Glitch. */
+            //Container do efeito glitch
             &__name{
                 margin-bottom: 30px;
                 position: relative;
                 height: 65px;
                 
+    
+                @include mobiTable{
+                    margin-bottom: .5em;
+                }
+    
+                @include mobile{
+                    margin-bottom: .3em;
+                }
                 
-                /* Nome aqui. */
-                /* Duas animações, uma para a palavra e outro para as com efeito glitch. */
+                //Nome aqui
+                // Duas animações, uma para a palavra e outro para as com efeito glitch.
                 &__glitch{
                     font-size: 2em;
                     position: absolute;
@@ -98,7 +106,7 @@
                     letter-spacing: 3px;
                     animation: nameMove .3s linear 2s 5 normal none;
                     
-                    /* Load Ani */
+                    // Load Ani 
                     &::before, &::after{
                         content: "LEVI";
                         position: absolute;
@@ -107,7 +115,7 @@
                         animation: bug .3s linear 2s 5 normal none;
                     }
 
-                    /* Cor e propriedades para animação glitch. */
+                    // Cor e propriedades para animação glitch.
                     &::before{
                         color: #e91e63;
                         z-index: -2;
@@ -120,7 +128,7 @@
                         animation-direction: reverse;
                     }
                     
-                    /* Ani Hover */
+                    //Ani hover
                     &:hover{
                         animation: nameMove .3s linear 2s infinite normal none;
                     }
