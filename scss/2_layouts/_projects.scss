@@ -103,10 +103,22 @@
     color: variables.$scss-color;
 }
 
+.js__icon{
+    color: variables.$js-color;
+}
+
+.bs__icon{
+    color: variables.$bs-color;
+}
+
 //Icons Project - Brand
 
 #gm__icon{
     color: variables.$project_gm_color;
+}
+
+#it__icon{
+    color: black;
 }
 
 .null__icon{
