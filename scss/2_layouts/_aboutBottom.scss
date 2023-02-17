@@ -1,4 +1,5 @@
 @use "../1_base/variables";
+@use "../1_base/title";
 @import "../3_modules/modules.scss";
 
 .about{
@@ -7,22 +8,7 @@
     padding: 35px 0;
 
     &__title{
-        font-family: variables.$title-font;
-        color: variables.$white-color;
-        text-align: center;
-        font-size: variables.$title-size;
-        padding: 35px 0;
-
-
-        @include mobiTable{
-            font-size: variables.$title-size-mt;
-            padding-bottom: 10px;
-        }
-
-        @include mobile{
-            font-size: variables.$title-size-m;
-            padding-bottom: 10px;
-        }
+        @extend %base-title-style;
     }
 
     &__text{

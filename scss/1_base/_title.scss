@@ -1,0 +1,19 @@
+@use "../1_base/variables";
+@import "../3_modules/modules.scss";
+
+%base-title-style {
+    font-family: variables.$title-font;
+    color: variables.$white-color;
+    font-size: variables.$title-size;
+    text-align: center;
+    padding: 40px 0;
+
+    @include mobiTable{
+        font-size: variables.$title-size-mt;
+    }
+
+    @include mobile{
+        font-size: variables.$title-size-m;
+    }
+
+}

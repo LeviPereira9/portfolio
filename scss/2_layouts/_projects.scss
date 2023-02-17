@@ -1,22 +1,15 @@
 @use "../1_base/variables";
+@use "../1_base/title";
 @import "../3_modules/modules.scss";
 
 .projects{
     border-top: 1px solid variables.$senary-color;
     background-color: variables.$quinary-color;
-
+    padding-top: 35px;
     
     
     &__title{
-        font-size: 2em;
-        text-align: center;
-        font-family: variables.$title-font;
-        color: variables.$white-color;
-        padding: 75px 0 0 0;
-        margin-bottom: 35px;
-        transition: all 1s;
-        
-        
+       @extend %base-title-style;
     }
 
     &__container{
@@ -37,6 +30,7 @@
                 transform: translate(-50%, 50%);
                 font-size: 2.5em;
                 z-index: 1;
+                color: variables.$project_gm_color;
             }
             
             &::after{
@@ -113,13 +107,6 @@
 
 //Icons Project - Brand
 
-#gm__icon{
-    color: variables.$project_gm_color;
-}
-
-#it__icon{
-    color: black;
-}
 
 .null__icon{
     color: white;
