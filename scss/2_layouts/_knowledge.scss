@@ -1,222 +1,214 @@
-@use "../1_base/variables";
-@use "../1_base/title";
-@import "../3_modules/modules.scss";
+@use '../1_base/variables';
+@use '../1_base/title';
+@import '../3_modules/modules.scss';
 
-.knowledge{
-    border-top: 1px solid variables.$senary-color;
-    background-image: url("../../img/repeatBack.png");
-    padding: 35px 0;
+.knowledge {
+  border-top: 1px solid variables.$senary-color;
+  background-image: url('../../img/repeatBack.png');
+  padding: 35px 0;
 
-    &__title{
-        @extend %base-title-style;
+  &__title {
+    @extend %base-title-style;
+  }
+
+  &__selector {
+    padding: 25px;
+    transition: all 1s;
+
+    &__icons {
+      font-size: 4.5em;
+      transition: all 1s;
+      padding: 15px;
+      cursor: pointer;
+      transition: all 1s;
+
+      @include tabDesk {
+        font-size: 3.5em;
+      }
+
+      @include mobiTable {
+        font-size: 3em;
+      }
     }
-    
-    &__selector{
-        padding: 25px;
+  }
+
+  &__content {
+    &__start {
+      color: variables.$white-color;
+      line-height: 2.3em;
+      text-align: justify;
+      padding: 0 35px;
+      font-size: 1.15em;
+
+      p {
+        margin-bottom: 35px;
+
+        @include tablet {
+          font-size: variables.$text-size;
+        }
+
+        @include mobiTable {
+          font-size: variables.$text-size-mt;
+        }
+
+        @include mobile {
+          font-size: variables.$text-size-m;
+        }
+      }
+    }
+
+    &__info {
+      &__text {
+        color: white;
+        padding: 5px 15px;
+        margin-bottom: 25px;
+        text-align: justify;
         transition: all 1s;
+        font-size: variables.$text-size;
 
-
-        &__icons{
-            font-size: 4.5em;
-            transition: all 1s;
-            padding: 15px;
-            cursor: pointer;
-            transition: all 1s;
-        
-
-            @include tabDesk{
-                font-size: 3.5em;
-            }
-
-            @include mobiTable{
-                font-size: 3em;
-            }
-
-    
-        }
-    }
-
-    &__content{
-        
-        &__start{
-            color: variables.$white-color;
-            line-height: 2.3em;
-            text-align: justify;
-            padding: 0 35px;
-            font-size: 1.15em;
-
-            p{
-                margin-bottom: 35px;
-
-                @include tablet{
-                    font-size: variables.$text-size;
-                }
-
-                @include mobiTable{
-                    font-size: variables.$text-size-mt;
-                }
-
-                @include mobile{
-                    font-size: variables.$text-size-m;
-                }
-            }
+        @include tablet {
+          font-size: variables.$text-size-t;
         }
 
-        &__info{
-
-            &__text{
-                color: white;
-                padding: 5px 15px;
-                margin-bottom: 25px;
-                text-align: justify;
-                transition: all 1s;
-                font-size: variables.$text-size;
-
-                @include tablet{
-                    font-size: variables.$text-size-t;
-                }
-
-                @include mobiTable{
-                    font-size: variables.$text-size-mt;
-                }
-
-                @include mobile{
-                    font-size: variables.$text-size-m;
-                }
-            }
-
-            &__list{
-                color: white;
-                margin-left: 50px;
-                transition: all 1s;
-                font-size: 1.2em;
-                
-                li{
-                    list-style: none;
-                    margin-bottom: 1.1em;
-
-                    &::before {
-                        content: "•";
-                        display: inline-block;
-                        width: 1em;
-                      }
-                }
-
-                @include tablet{
-                    font-size: 1.15em;
-                }
-                
-                @include mobiTable{
-                    font-size: 1.1em;
-                }
-                
-                @include mobile{
-                    font-size: variables.$text-size-m;
-                }
-            }
+        @include mobiTable {
+          font-size: variables.$text-size-mt;
         }
-        
-    }
-}
 
+        @include mobile {
+          font-size: variables.$text-size-m;
+        }
+      }
 
-#html5Icon{
-    color: variables.$html-color;
-    transition: all .8s;
-    border: 1px solid transparent;
-    border-radius: 15px;
-
-    &:hover{
-        border: 1px solid black;
-        background-color: variables.$html-color;
+      &__list {
         color: white;
-    }
-}
-#css3Icon{
-    color: variables.$css-color;
-    transition: all .8s;
-    border: 1px solid transparent;
-    border-radius: 15px;
+        margin-left: 50px;
+        transition: all 1s;
+        font-size: 1.2em;
 
-    &:hover{
-        border: 1px solid black;
-        background-color: variables.$css-color;
-        color: white;
-    }
-}
-#jsIcon{
-    color: variables.$js-color;
-    transition: all .8s;
-    border: 1px solid transparent;
-    border-radius: 15px;
+        li {
+          list-style: none;
+          margin-bottom: 1.1em;
 
-    &:hover{
-        border: 1px solid black;
-        background-color: variables.$js-color;
-        color: white;
-    }
-}
-#sassIcon{
-    color: variables.$scss-color;
-    transition: all .8s;
-    border: 1px solid transparent;
-    border-radius: 15px;
+          &::before {
+            content: '•';
+            display: inline-block;
+            width: 1em;
+          }
+        }
 
-    &:hover{
-        border: 1px solid black;
-        background-color: variables.$scss-color;
-        color: white;
-    }
-}
-#reactIcon{
-    color: variables.$react-color;
-    transition: all .8s;
-    border: 1px solid transparent;
-    border-radius: 15px;
+        @include tablet {
+          font-size: 1.15em;
+        }
 
-    &:hover{
-        border: 1px solid black;
-        background-color: variables.$react-color;
-        color: white;
-    }
-}
-#gitIcon{
-    color: variables.$git-color;
-    transition: all .8s;
-    border: 1px solid transparent;
-    border-radius: 15px;
+        @include mobiTable {
+          font-size: 1.1em;
+        }
 
-    &:hover{
-        border: 1px solid black;
-        background-color: variables.$git-color;
-        color: white;
+        @include mobile {
+          font-size: variables.$text-size-m;
+        }
+      }
     }
+  }
 }
 
-#tsIcon{
-    fill: variables.$ts-color;
-    transition: all .8s;
-    border: 1px solid transparent;
-    border-radius: 15px;
-    width: 1.5em;
-    height: 1.5em;
-    
-    &:hover{
-        border: 1px solid black;
-        background-color: variables.$ts-color;
-        fill: white;
-    }
+#html5Icon {
+  color: variables.$html-color;
+  transition: all 0.8s;
+  border: 1px solid transparent;
+  border-radius: 15px;
+
+  &:hover {
+    border: 1px solid black;
+    background-color: variables.$html-color;
+    color: white;
+  }
+}
+#css3Icon {
+  color: variables.$css-color;
+  transition: all 0.8s;
+  border: 1px solid transparent;
+  border-radius: 15px;
+
+  &:hover {
+    border: 1px solid black;
+    background-color: variables.$css-color;
+    color: white;
+  }
+}
+#jsIcon {
+  color: variables.$js-color;
+  transition: all 0.8s;
+  border: 1px solid transparent;
+  border-radius: 15px;
+
+  &:hover {
+    border: 1px solid black;
+    background-color: variables.$js-color;
+    color: white;
+  }
+}
+#sassIcon {
+  color: variables.$scss-color;
+  transition: all 0.8s;
+  border: 1px solid transparent;
+  border-radius: 15px;
+
+  &:hover {
+    border: 1px solid black;
+    background-color: variables.$scss-color;
+    color: white;
+  }
+}
+#reactIcon {
+  color: variables.$react-color;
+  transition: all 0.8s;
+  border: 1px solid transparent;
+  border-radius: 15px;
+
+  &:hover {
+    border: 1px solid black;
+    background-color: variables.$react-color;
+    color: white;
+  }
+}
+#gitIcon {
+  color: variables.$git-color;
+  transition: all 0.8s;
+  border: 1px solid transparent;
+  border-radius: 15px;
+
+  &:hover {
+    border: 1px solid black;
+    background-color: variables.$git-color;
+    color: white;
+  }
 }
 
-#bsIcon{
-    color: variables.$bs-color;
-    transition: all .8s;
-    border: 1px solid transparent;
-    border-radius: 15px;
+#tsIcon {
+  fill: variables.$ts-color;
+  transition: all 0.8s;
+  border: 1px solid transparent;
+  border-radius: 15px;
+  width: 1.5em;
+  height: 1.5em;
 
-    &:hover{
-        border: 1px solid black;
-        background-color: variables.$bs-color;
-        color: white;
-    }
+  &:hover {
+    border: 1px solid black;
+    background-color: variables.$ts-color;
+    fill: white;
+  }
+}
+
+#bsIcon {
+  color: variables.$bs-color;
+  transition: all 0.8s;
+  border: 1px solid transparent;
+  border-radius: 15px;
+
+  &:hover {
+    border: 1px solid black;
+    background-color: variables.$bs-color;
+    color: white;
+  }
 }

@@ -123,48 +123,60 @@
           <section class="row knowledge__selector col-12 col-md-4">
             <div class="col-3 col-md-6">
               <i
-                class="fa-brands fa-html5 knowledge__selector__icons"
+                class="fa-brands fa-html5 knowledge__selector__icons mb-2"
                 id="html5Icon"
+                aria-label="Mostrar conhecimentos de HTML5"
+                tabindex="0"
                 role="button"
                 onclick="changeContent(0)"
               ></i>
             </div>
             <div class="col-3 col-md-6">
               <i
-                class="fa-brands fa-css3-alt knowledge__selector__icons"
+                class="fa-brands fa-css3-alt knowledge__selector__icons mb-2"
                 id="css3Icon"
+                aria-label="Mostrar conhecimentos de CSS3"
+                tabindex="0"
                 role="button"
                 onclick="changeContent(1)"
               ></i>
             </div>
             <div class="col-3 col-md-6">
               <i
-                class="fa-brands fa-square-js knowledge__selector__icons"
+                class="fa-brands fa-square-js knowledge__selector__icons mb-2"
                 id="jsIcon"
+                aria-label="Mostrar conhecimentos de JavaScript"
+                tabindex="0"
                 role="button"
                 onclick="changeContent(2)"
               ></i>
             </div>
             <div class="col-3 col-md-6">
               <i
-                class="fa-brands fa-sass knowledge__selector__icons"
+                class="fa-brands fa-sass knowledge__selector__icons mb-2"
                 id="sassIcon"
+                aria-label="Mostrar conhecimentos de SASS"
+                tabindex="0"
                 role="button"
                 onclick="changeContent(3)"
               ></i>
             </div>
             <div class="col-3 col-md-6">
               <i
-                class="fa-brands fa-react knowledge__selector__icons"
+                class="fa-brands fa-react knowledge__selector__icons mb-2"
                 id="reactIcon"
+                aria-label="Mostrar conhecimentos de ReactJS"
+                tabindex="0"
                 role="button"
                 onclick="changeContent(4)"
               ></i>
             </div>
             <div class="col-3 col-md-6">
               <i
-                class="fa-brands fa-git-alt knowledge__selector__icons"
+                class="fa-brands fa-git-alt knowledge__selector__icons mb-2"
                 id="gitIcon"
+                aria-label="Mostrar conhecimentos de GIT"
+                tabindex="0"
                 role="button"
                 onclick="changeContent(5)"
               ></i>
@@ -413,13 +425,10 @@
               </div>
               <div
                 class="card-footer align-items-center projects__container__footer"
-              >
-                <p>Tecnologias usadas: HTML5, SCSS, REACT.</p>
-              </div>
+              ></div>
             </div>
           </div>
-          <!-- Fim do Projeto Grandes Mentes -->
-          <!-- Projeto 4 - Issue Tracker - JS -->
+          <!-- Projeto 2 - Issue Tracker - JS -->
           <div class="col-10 col-sm-9 col-md-5 col-lg-3 mb-4">
             <div class="card projects__container bg-dark">
               <div class="card-header projects__container__header">
@@ -430,7 +439,7 @@
                 ></i>
               </div>
               <img
-                src="img/todo.jpg"
+                src="img/issue.jpg"
                 alt="Projeto Grandes Mentes"
                 class="card-img-top"
               />
@@ -468,9 +477,7 @@
               </div>
               <div
                 class="card-footer align-items-center projects__container__footer"
-              >
-                <p>Tecnologias usadas: HTML5, CSS3, BS, JS.</p>
-              </div>
+              ></div>
             </div>
           </div>
           <!-- Projeto 3 - Weather App -->
@@ -522,27 +529,42 @@
               </div>
               <div
                 class="card-footer align-items-center projects__container__footer"
-              >
-                <p>Tecnologias usadas: HTML5, CSS3, BS, JS.</p>
-              </div>
+              ></div>
             </div>
           </div>
+          <!-- Projeto 4 - TodoIst Clone -->
           <div class="col-10 col-sm-9 col-md-5 col-lg-3 mb-4">
             <div class="card projects__container bg-dark">
               <div class="card-header projects__container__header">
-                <i class="bi bi-wind wind__icon null__icon"></i>
+                <i class="fa-brands fa-react react__icon me-2"></i>
+                <img
+                  class="projects__container__header__controlSvg me-2"
+                  src="img/ts.svg"
+                  alt="typescript"
+                />
+                <i class="fa-brands fa-sass sass__icon me-2"></i>
+                <img
+                  class="projects__container__header__controlSvg"
+                  src="img/firebase.svg"
+                  alt="firebase"
+                />
                 <i
-                  class="bi bi-cloud-drizzle-fill projects__container__header__icon1 null__icon"
+                  class="bi bi-check2-circle projects__container__header__icon1"
                 ></i>
               </div>
               <img
-                src="img/backgroundEmpty.png"
+                src="img/todo.jpg"
                 alt="Projeto Grandes Mentes"
                 class="card-img-top"
               />
               <div class="card-body projects__container__body">
-                <h5 class="card-title text-center">Em breve...</h5>
-                <p class="card-text">...</p>
+                <h5 class="card-title text-center">TodoIst</h5>
+                <p class="card-text">
+                  Este aplicativo é um clone do Todoist e permite o
+                  gerenciamento de tarefas que ajuda os usuários a organizar
+                  suas atividades diárias, definir prioridades e acompanhar o
+                  progresso das suas tarefas.
+                </p>
 
                 <div class="d-flex justify-content-center">
                   <div
@@ -550,10 +572,18 @@
                     role="group"
                     aria-label="project navegation"
                   >
-                    <a href="#" class="btn projects__container__body__buttons">
+                    <a
+                      href="https://todoist-clo.vercel.app/"
+                      target="_blank"
+                      class="btn projects__container__body__buttons"
+                    >
                       <i class="bi bi-link"> Site</i>
                     </a>
-                    <a href="#" class="btn projects__container__body__buttons">
+                    <a
+                      href="https://github.com/LeviPereira9/todoist-clone"
+                      target="_blank"
+                      class="btn projects__container__body__buttons"
+                    >
                       <i class="bi bi-github"> Código</i>
                     </a>
                   </div>
@@ -561,9 +591,7 @@
               </div>
               <div
                 class="card-footer align-items-center projects__container__footer"
-              >
-                <p>Tecnologias usadas: ...</p>
-              </div>
+              ></div>
             </div>
           </div>
           <!-- Futuro Projeto -->

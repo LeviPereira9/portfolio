@@ -1,114 +1,111 @@
-@use "../1_base/variables";
-@use "../1_base/title";
-@import "../3_modules/modules.scss";
+@use '../1_base/variables';
+@use '../1_base/title';
+@import '../3_modules/modules.scss';
 
-.projects{
-    border-top: 1px solid variables.$senary-color;
-    background-color: variables.$quinary-color;
-    padding-top: 35px;
-    
-    
-    &__title{
-       @extend %base-title-style;
+.projects {
+  border-top: 1px solid variables.$senary-color;
+  background-color: variables.$quinary-color;
+  padding-top: 35px;
+
+  &__title {
+    @extend %base-title-style;
+  }
+
+  &__container {
+    &__header {
+      position: relative;
+      background-color: variables.$tertiary-color;
+
+      h5 {
+        font-weight: bold;
+      }
+
+      &__controlSvg {
+        display: inline;
+        width: 15px;
+        height: 15px !important;
+      }
+
+      &__icon1 {
+        position: absolute;
+        bottom: 1%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        font-size: 2.5em;
+        z-index: 1;
+        color: variables.$project_gm_color;
+      }
+
+      &::after {
+        content: '';
+        width: 5em;
+        height: 4.3em;
+        border-radius: 50%;
+        background-color: variables.$tertiary-color;
+        position: absolute;
+        bottom: 1%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+      }
     }
 
-    &__container{
-
-        &__header{
-            position: relative;
-            background-color: variables.$tertiary-color;
-
-            h5{
-                font-weight: bold;
-            }
-            
-
-            &__icon1{
-                position: absolute;
-                bottom: 1%;
-                left: 50%;
-                transform: translate(-50%, 50%);
-                font-size: 2.5em;
-                z-index: 1;
-                color: variables.$project_gm_color;
-            }
-            
-            &::after{
-                content: "";
-                width: 5em;
-                height: 4.3em;
-                border-radius: 50%;
-                background-color: variables.$tertiary-color;
-                position: absolute;
-                bottom: 1%;
-                left: 50%;
-                transform: translate(-50%, 50%);
-            }
-            
-        }
-
-        img{
-            border-top-left-radius: 0;
-            border-top-right-radius: 0;
-            height: 13em;
-        }
-
-        &__body{
-            text-align: justify;
-            background-image: url("../../img/repeatBack.png");
-            color: white;
-
-            p{
-                font-size: 0.9em;
-                text-indent: 1em;
-            }
-
-            &__buttons{
-                background-color: variables.$tertiary-color;
-                color: white;
-                border: 1px solid variables.$senary-color;
-                width: 7em;
-
-                &:hover{
-                    background-color: white;
-                    color: black;
-                    font-weight: bold;
-                }
-            }
-        }
-
-        &__footer{
-            background-color: variables.$tertiary-color;
-            color: white;
-            font-style: italic;
-            font-size: 0.9em;
-            
-        }
-        
+    img {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      height: 13em;
     }
-    
+
+    &__body {
+      text-align: justify;
+      background-image: url('../../img/repeatBack.png');
+      color: white;
+
+      p {
+        font-size: 0.9em;
+        text-indent: 1em;
+      }
+
+      &__buttons {
+        background-color: variables.$tertiary-color;
+        color: white;
+        border: 1px solid variables.$senary-color;
+        width: 7em;
+
+        &:hover {
+          background-color: white;
+          color: black;
+          font-weight: bold;
+        }
+      }
+    }
+
+    &__footer {
+      background-color: variables.$tertiary-color;
+      color: white;
+      font-style: italic;
+      font-size: 0.9em;
+    }
+  }
 }
 
 //Icons Project - Features
-.react__icon{
-    color: variables.$react-color;
+.react__icon {
+  color: variables.$react-color;
 }
-.sass__icon{
-    color: variables.$scss-color;
-}
-
-.js__icon{
-    color: variables.$js-color;
+.sass__icon {
+  color: variables.$scss-color;
 }
 
-.bs__icon{
-    color: variables.$bs-color;
+.js__icon {
+  color: variables.$js-color;
+}
+
+.bs__icon {
+  color: variables.$bs-color;
 }
 
 //Icons Project - Brand
 
-
-.null__icon{
-    color: white;
+.null__icon {
+  color: white;
 }
-
